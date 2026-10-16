@@ -164,8 +164,8 @@
    "p3_mace/raw/out/x0.7_C0.0_none_none_T300.json",
    "p3_mace/results/p3_mace_results.json",
    "p5_reach/reach_prediction.json",
-   "p5_reach/recompute/gpu/analysis/gpu_mpa_summary.json",
    "p5_reach/recompute/gpu/analysis/p3_mpa_results.json",
+   "p5_reach/recompute/gpu/gpu_design.json",
    "p5_reach/recompute/gpu/p3/out/H_x0.1_C0.01_clus_B_T300.json",
    "p5_reach/recompute/gpu/p3/out/H_x0.1_C0.01_disp_P_T300.json",
    "p5_reach/recompute/gpu/p3/out/H_x0.1_C0.03_disp_P_T1100.json",
@@ -329,6 +329,7 @@
    "p5_reach/recompute/z1/out/far_1.json",
    "p5_reach/recompute/z1/out/ref.json",
    "p5_reach/recompute/zone_mpa_results.json",
+   "p5_reach/stats/stats_results.json",
    "paper/figure_code/make_figures.py",
    "party4_mace/raw/mace_x0.15_T300_z24.json",
    "party4_mace/raw/mace_x0.5_T300_z24.json"

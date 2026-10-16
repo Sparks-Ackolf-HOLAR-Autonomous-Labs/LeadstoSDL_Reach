@@ -35,7 +35,7 @@ One script draws every figure at its print size into `paper/figure_code/figures/
 
     python3 paper/figure_code/make_figures.py
 
-Figures: `fig1_chain`, `fig2_reach`, `fig3_defects`, `fig4_md`, `fig5_cost`, `fig6_margins`.
+Figures: `fig1_chain`, `fig2_defects`, `fig3_md`, `fig4_margins`, `fig5_cost`, `figS1_reach`, `figS2_cards`.
 
 ## Checkers and analyses
 
