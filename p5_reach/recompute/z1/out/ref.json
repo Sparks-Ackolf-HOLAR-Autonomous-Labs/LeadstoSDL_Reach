@@ -1,0 +1,18 @@
+{
+ "task": "ref",
+ "n_atoms": 1728,
+ "n_C": 28,
+ "n_particle": 47,
+ "RP_A": 5.0,
+ "NREP": 6,
+ "model": "MACE-MPA-0 medium float64",
+ "E_eV": -9420.265953347907,
+ "V_A3": 34642.20252228428,
+ "fmax_norm": 0.00478923449404259,
+ "pressure_GPa": 0.004705256708753453,
+ "optimizer_converged": true,
+ "steps": 123,
+ "restarts": 0,
+ "gate_pass": true,
+ "wall_s": 1815.061623096466
+}

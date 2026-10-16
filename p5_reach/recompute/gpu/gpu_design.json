@@ -1,0 +1,25 @@
+{
+ "campaign": "p5-mace-version-recompute-gpu-2026-10-10",
+ "parent": "p5-reach-prediction-mace-version (ledger 130); CPU units registered at ledger 133",
+ "paper": "P5",
+ "operator_go": "issue 55, 2026-10-10 UTC: 'Go head for run R_P4B and R_P3'",
+ "question": "Which of the claims predicted at ledger 130 that rest on MACE MD (party-4b offset and composition trend, head-to-head MF-GP rows, P3 hidden-subset Q1-Q5 and cost inputs) change when the MD is repeated with MACE-MPA-0 medium, and does the predicted reach match the observed reach?",
+ "old_model": "MACE-MP-0 small (2023-12-10), float32, GPU (party 4b ledger 1; P3 ledger 64-73)",
+ "new_model": "MACE-MPA-0 medium (mace_mp model='medium-mpa-0'), float32, mace 0.3.16 (CHPC module mace/0.3.16_cu126, plain torch, no cuEquivariance); checkpoint macempa0mediummodel sha256 75428afe3a1d7d8062e19bcaabd5c433623cabf308242ec9fb493e38604fb638 (as ledger 133), cached in the CHPC home",
+ "precision_note": "float32 as the original MD (the CPU units used float64); the change under test is the model, not the precision",
+ "units": {
+  "R_P4B": "p4b/mp_rnemd_ase.py (byte-identical to party4_mace/mp_rnemd_ase.py), x = 0.5 and 0.15, 300 K, 4x4x24 (3072 atoms), seed 101, 20000 equil + 130000 prod steps, swap every 50; only --model changes. Script has no checkpoint: a preempted point restarts.",
+  "R_P3": "p3/mace_rnemd.py (byte-identical to p3_mace/mace_rnemd.py) on p3/points_mpa.json = p3_mace/chpc/points.json with protocol.model set to 'medium-mpa-0'; all 89 ids (71 planner points, 16 hidden, 2 replicate pairs), same seeds and protocol; checkpointed"
+ },
+ "cost_estimate": "from gpu_timing/TIMING.md (A6000: 549 ms/step at 3072 atoms, 183 ms/step at 1152 atoms): R_P4B about 23 h per point on an A6000-class card, about 46 GPU-h (the 16 GPU-h of TIMING.md scaled the GB10+cuEquivariance cost and is too low for CHPC cards without cuEquivariance); R_P3 about 3 to 4 h per run, about 300 GPU-h",
+ "predictions": "the claim table of p5_reach/reach_prediction.json (sha256 9074e132956896b67de0a6f3bc82689157c2eb592d9e461f0c5aeed20d41c5c9), ledger 130, for every claim settled by R_P4B or R_P3: C10, C11, C12, C13, C14, C15, C16, C17, C18, C19",
+ "analysis": "after the raw outputs are hashed onto the ledger: R_P4B: kappa per point, offset vs the Tersoff values of ledger 1 (0.696 and 1.188 W/mK), composition ratio, then the head-to-head script of ledger 63-67 with the two new MACE rows swapped in (code unchanged); R_P3: p3_mace/analyze_p3_mace.py on the new outputs (paths swapped, code unchanged), QC and loss rules of p3_mace_design.json; then score each claim with PREDICTION.md section 6",
+ "decision_rule": {
+  "claim still holds under its registered rule": "ledger 'strengthen' with model-version provenance",
+  "claim flips under its registered rule": "ledger 'scope_limit' to 'MACE-MP-0 small only' plus a source flag on every dependent paper statement; paper text changes only on operator decision",
+  "run fails QC or has no output after 3 attempts": "counted as a lost run (P3 rule) and reported; R_P4B claims are 'not settled' if either point is lost"
+ },
+ "deviation_policy": "infrastructure reruns (preemption, broken nodes, card placement) allowed with a ledger placement entry; any change to structures, seeds, protocol or model is a new registration",
+ "placement": "notchpeak-gpu-guest / owner-gpu-guest only; R_P4B restricted to cards with >= 24 GB (a6000, a40, l40, a100, 3090); grn061 and the DGX not used",
+ "collect": "gpu/fetch_gpu.sh, then gpu/commit_gpu_raw.py p4b|p3 before any analysis"
+}

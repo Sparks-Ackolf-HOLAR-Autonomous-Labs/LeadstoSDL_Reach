@@ -1,0 +1,3654 @@
+{
+ "event": "MACE foundation-potential version change (MACE-MP-0 -> newer checkpoint trained on MPtrj + Alexandria or OMat, e.g. MACE-MPA-0 / MACE-OMAT-0)",
+ "status": "prediction from the record only; no MACE calculation run",
+ "ledger_read": {
+  "n_entries": 128,
+  "last_seq": 127,
+  "last_time": "2026-10-09T18:01:19Z"
+ },
+ "record_note_on_versions": "the record carries two checkpoints, not one: MACE-MP-0 medium float64 (M1, M1c, Z1) and MACE-MP-0 small float32 (party 4b, P3 MD; p3_mace_design says 'MACE-MP-0 small (2023-12-10)'); no file names the 20231203 medium checkpoint file, only 'MACE-MP-0 medium' and the CHPC module mace/0.3.16_cu126",
+ "plausible_version_shift_eV": 0.3,
+ "seeds": [
+  {
+   "id": "MACE_P4B",
+   "what": "party 4b: MACE-MD Muller-Plathe kappa, 2 points (x = 0.15, 0.5; 300 K)",
+   "raw_glob": "party4_mace/raw/*.json",
+   "model_key": "engine",
+   "wall_key": "wall_s",
+   "ledger_seq": 1,
+   "wall_unit": "GPU-h (DGX GB10)",
+   "n_files": 2,
+   "models_in_files": {
+    "ASE Muller-Plathe + mace-mp small (cuda)": 2
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 8.07,
+   "ledger_campaign": "correct-mace-units",
+   "ledger_op_id": "correct-mace-units-2026-09-27"
+  },
+  {
+   "id": "MACE_M1",
+   "what": "where-carbon-goes gate M1: 57 cell+position relaxations (216-site cells)",
+   "raw_glob": "nano_sigec/m1/out/*.json",
+   "model_key": "model",
+   "wall_key": "wall_s",
+   "ledger_seq": 47,
+   "wall_unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)",
+   "n_files": 10,
+   "models_in_files": {
+    "MACE-MP-0 medium float64": 10
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 11.52,
+   "ledger_campaign": "nano-sigec-doping-2026-09-29",
+   "ledger_op_id": "batch-nano-sigec-doping-2026-09-29-M1"
+  },
+  {
+   "id": "MACE_M1C",
+   "what": "where-carbon-goes converged rerun M1c: 51 relaxations",
+   "raw_glob": "nano_sigec/m1c/out/*.json",
+   "model_key": "model",
+   "wall_key": "wall_s",
+   "ledger_seq": 54,
+   "wall_unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)",
+   "n_files": 51,
+   "models_in_files": {
+    "MACE-MP-0 medium float64": 51
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 1.75,
+   "ledger_campaign": "nano-sigec-m1c-converged-2026-09-30",
+   "ledger_op_id": "batch-nano-sigec-m1c-converged-2026-09-30"
+  },
+  {
+   "id": "MACE_Z1",
+   "what": "Si-zone stage Z1: Ge segregation energy around an embedded SiC sphere, 19 relaxations",
+   "raw_glob": "nano_sigec/si_zone/chpc/out/*.json",
+   "model_key": "model",
+   "wall_key": "wall_s",
+   "ledger_seq": 69,
+   "wall_unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)",
+   "n_files": 19,
+   "models_in_files": {
+    "MACE-MP-0 medium float64": 19
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 2.93,
+   "ledger_campaign": "sigec-si-zone-2026-09-30",
+   "ledger_op_id": "batch-sigec-si-zone-2026-09-30"
+  },
+  {
+   "id": "MACE_P3",
+   "what": "P3 hidden-subset MACE-MD: 89 rNEMD runs (71 planner points, 16 hidden, 2 repeats)",
+   "raw_glob": "p3_mace/raw/out/*.json",
+   "model_key": "engine",
+   "wall_key": "wall_s_this_attempt",
+   "ledger_seq": 72,
+   "wall_unit": "GPU-h (CHPC guest GPUs, mixed)",
+   "n_files": 89,
+   "models_in_files": {
+    "ASE MP-rNEMD + mace-mp small float32 (NVIDIA GeForce RTX 2080 Ti)": 63,
+    "ASE MP-rNEMD + mace-mp small float32 (NVIDIA A40)": 8,
+    "ASE MP-rNEMD + mace-mp small float32 (NVIDIA RTX A6000)": 8,
+    "ASE MP-rNEMD + mace-mp small float32 (NVIDIA TITAN V)": 6,
+    "ASE MP-rNEMD + mace-mp small float32 (NVIDIA A800 40GB Active)": 2,
+    "ASE MP-rNEMD + mace-mp small float32 (Tesla T4)": 2
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 150.08,
+   "ledger_campaign": "p3-mace-hidden-subset-2026-09-30",
+   "ledger_op_id": "batch-p3-mace-hidden-subset-2026-09-30"
+  },
+  {
+   "id": "MACE_P4T1",
+   "what": "P4 stage T1 (in progress): MACE-MP-0 medium float32 MD of Ge0.88Sn0.12 with vacancies; only the two benchmark files are in the repository so far",
+   "raw_glob": "p4_tskg/T1_md/bench/*.json",
+   "model_key": "args.model",
+   "wall_key": "eq_s",
+   "ledger_seq": 126,
+   "wall_unit": "GPU-h (CHPC guest GPU, benchmark only)",
+   "n_files": 2,
+   "models_in_files": {
+    "MACE-MP-0 medium (from args; mace_mp)": 2
+   },
+   "model_check_all_mace": true,
+   "recorded_wall_h": 0.01,
+   "ledger_campaign": "p4-t1-design",
+   "ledger_op_id": "p4-t1-design"
+  },
+  {
+   "id": "MACE_CONST",
+   "what": "MACE-derived constants copied into code (no ledger entry): P08 fault magnitude 0.50-0.60 x Tersoff, detector-v2 MACE/Tersoff lattice ratio, MACE-MD cost 246 in the P3 covering cost model, 4.1 h per point in p3_limits",
+   "ledger_seq": null
+  }
+ ],
+ "seed_ledger_entries": [
+  1,
+  47,
+  54,
+  69,
+  72,
+  126
+ ],
+ "link_type_counts": {
+  "commits_output": 6,
+  "explicit_opid": 6,
+  "file_path": 25,
+  "text_citation": 32,
+  "same_campaign": 150,
+  "parent_campaign": 19,
+  "explicit_field": 60
+ },
+ "unresolved_parent_campaign_names": [
+  {
+   "seq": 58,
+   "parent_campaign": "nano-sigec-2026-09-29"
+  }
+ ],
+ "mace_reading_code": {
+  "nano_sigec": {
+   "MACE_M1C": [
+    "analyze_sigec.py",
+    "commit_m1.py",
+    "make_figures_sigec.py"
+   ],
+   "MACE_M1": [
+    "analyze_sigec.py",
+    "summarize_m1.py"
+   ]
+  },
+  "nano_sigec/light_dopants": {
+   "MACE_M1C": [
+    "analyze_light_dopants.py"
+   ]
+  },
+  "nano_sigec/m1c": {
+   "MACE_M1C": [
+    "apply_m1c_decision.py",
+    "summarize_m1c.py"
+   ],
+   "MACE_M1": [
+    "summarize_m1c.py"
+   ]
+  },
+  "nano_sigec/si_zone": {
+   "MACE_Z1": [
+    "analyze_zone.py",
+    "apply_zone_decision.py",
+    "preregister_zone.py"
+   ]
+  },
+  "nano_sigec/si_zone/chpc": {
+   "MACE_Z1": [
+    "mace_zone.py"
+   ]
+  },
+  "nano_sigec/small_sic": {
+   "MACE_M1C": [
+    "decision_robustness.py"
+   ]
+  },
+  "nano_sigec/structures": {
+   "MACE_M1C": [
+    "make_structure_figure.py"
+   ]
+  },
+  "p3_limits": {
+   "MACE_P3": [
+    "loss_record.py",
+    "loss_replay.py",
+    "make_figure.py"
+   ],
+   "MACE_P4B": [
+    "cost_models.py"
+   ]
+  },
+  "p3_mace": {
+   "MACE_P3": [
+    "analyze_p3_mace.py",
+    "commit_p3_mace.py",
+    "design_p3_mace.py",
+    "mace_rnemd.py",
+    "preregister_p3_mace.py",
+    "reveal_hidden.py",
+    "sensitivity_p3_mace.py"
+   ],
+   "MACE_P4B": [
+    "mace_rnemd.py"
+   ]
+  },
+  "p3_prework/covering": {
+   "MACE_CONST": [
+    "covering.py"
+   ],
+   "MACE_P4B": [
+    "covering.py"
+   ]
+  },
+  "papers/paper1_j_mater_chem_a": {
+   "MACE_M1C": [
+    "make_sigec_figure.py"
+   ],
+   "MACE_P4B": [
+    "make_final_law_figure.py",
+    "make_hypergraph_figure.py"
+   ]
+  },
+  "papers/paper1_j_mater_chem_a/regen_figs": {
+   "MACE_P4B": [
+    "fig_final_law.py",
+    "fig_kappa_parties.py"
+   ],
+   "MACE_M1C": [
+    "fig_sigec.py",
+    "fig_sigec_structures.py"
+   ]
+  },
+  "party4_mace": {
+   "MACE_P4B": [
+    "mp_rnemd_ase.py"
+   ]
+  },
+  "phase_c": {
+   "MACE_P4B": [
+    "correct_mace_units.py"
+   ]
+  },
+  "phase_c/detector_v2": {
+   "MACE_CONST": [
+    "fault_study_v2.py"
+   ]
+  },
+  "phase_c/final_law": {
+   "MACE_P4B": [
+    "fit_final_law.py",
+    "make_final_law_figure.py"
+   ]
+  },
+  "phase_c/head_to_head": {
+   "MACE_P4B": [
+    "head_to_head.py"
+   ]
+  },
+  "phase_c/production/fault_catalog": {
+   "MACE_CONST": [
+    "inject_faults.py"
+   ]
+  },
+  "phase_c/sr_compare": {
+   "MACE_P3": [
+    "full_v2.py"
+   ],
+   "MACE_P4B": [
+    "full_v2.py"
+   ]
+  },
+  "pilot/kg": {
+   "MACE_P4B": [
+    "extract_kg.py",
+    "render_hypergraph.py"
+   ]
+  },
+  "second_system": {
+   "MACE_M1C": [
+    "screen_ga_sn.py"
+   ]
+  }
+ },
+ "reach_by_tier": {
+  "T0_explicit": {
+   "n_entries": 8,
+   "entries": [
+    1,
+    47,
+    54,
+    69,
+    72,
+    121,
+    126,
+    127
+   ],
+   "n_figure_scripts": 0
+  },
+  "T1_plus_prose_citations": {
+   "n_entries": 13,
+   "entries": [
+    1,
+    47,
+    49,
+    54,
+    55,
+    69,
+    70,
+    71,
+    72,
+    73,
+    121,
+    126,
+    127
+   ],
+   "n_figure_scripts": 0
+  },
+  "T2_plus_file_paths": {
+   "n_entries": 31,
+   "entries": [
+    1,
+    4,
+    5,
+    6,
+    14,
+    24,
+    47,
+    48,
+    49,
+    53,
+    54,
+    55,
+    58,
+    60,
+    61,
+    63,
+    64,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    81,
+    83,
+    121,
+    126,
+    127
+   ],
+   "n_figure_scripts": 7
+  },
+  "T3_plus_campaign_names": {
+   "n_entries": 49,
+   "entries": [
+    1,
+    4,
+    5,
+    6,
+    14,
+    24,
+    47,
+    48,
+    49,
+    53,
+    54,
+    55,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    103,
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    121,
+    126,
+    127
+   ],
+   "n_figure_scripts": 7
+  }
+ },
+ "reach_explicit_vs_inferred": {
+  "explicit_only": [
+   1,
+   47,
+   54,
+   69,
+   72,
+   121,
+   126,
+   127
+  ],
+  "added_by_prose_citations": [
+   49,
+   55,
+   70,
+   71,
+   73
+  ],
+  "added_by_file_paths": [
+   4,
+   5,
+   6,
+   14,
+   24,
+   48,
+   53,
+   58,
+   60,
+   61,
+   63,
+   64,
+   74,
+   75,
+   76,
+   77,
+   81,
+   83
+  ],
+  "added_by_campaign_names": [
+   59,
+   62,
+   65,
+   66,
+   67,
+   68,
+   78,
+   79,
+   80,
+   82,
+   84,
+   103,
+   104,
+   105,
+   106,
+   108,
+   109,
+   110
+  ]
+ },
+ "reached_entries": [
+  {
+   "seq": 1,
+   "kind": "shard_operation",
+   "op_id": "correct-mace-units-2026-09-27",
+   "campaign": "correct-mace-units",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C10_party_offset",
+    "C11_composition_trend_crossmethod"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:1",
+     "link": "commits_output",
+     "evidence": "2 files party4_mace/raw/*.json committed at ledger 1"
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "kind": "commitment",
+   "op_id": "commit-blind-fault-catalog-2026-09-28",
+   "campaign": "commit-blind-fault-catalog",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C19_P2_P08_fault"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:4",
+     "link": "file_path",
+     "evidence": "phase_c/production/fault_catalog/FAULT_CATALOG.md sits with phase_c/production/fault_catalog/{inject_faults.py} which read MACE_CONST"
+    }
+   ]
+  },
+  {
+   "seq": 5,
+   "kind": "commitment",
+   "op_id": "freeze-detector-2026-09-28",
+   "campaign": "freeze-detector",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C19_P2_P08_fault",
+    "C23_fault_study_chain"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:4",
+     "link": "file_path",
+     "evidence": "phase_c/production/fault_catalog/FAULT_CATALOG.md sits with phase_c/production/fault_catalog/{inject_faults.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:4",
+     "to": "L:5",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "kind": "deviation",
+   "op_id": "deviation-D1-detector-2026-09-28",
+   "campaign": "deviation-D1-detector",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C23_fault_study_chain"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:4",
+     "link": "file_path",
+     "evidence": "phase_c/production/fault_catalog/FAULT_CATALOG.md sits with phase_c/production/fault_catalog/{inject_faults.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:4",
+     "to": "L:5",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    },
+    {
+     "from": "L:5",
+     "to": "L:6",
+     "link": "explicit_opid",
+     "evidence": "payload names op_id freeze-detector-2026-09-28"
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "kind": "deviation",
+   "op_id": "deviation-D2-detector-2026-09-28",
+   "campaign": "deviation-D2-detector",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C19_P2_P08_fault",
+    "C23_fault_study_chain"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:4",
+     "link": "file_path",
+     "evidence": "phase_c/production/fault_catalog/FAULT_CATALOG.md sits with phase_c/production/fault_catalog/{inject_faults.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:4",
+     "to": "L:5",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    },
+    {
+     "from": "L:5",
+     "to": "L:14",
+     "link": "explicit_opid",
+     "evidence": "payload names op_id freeze-detector-2026-09-28"
+    }
+   ]
+  },
+  {
+   "seq": 24,
+   "kind": "shard_operation",
+   "op_id": "scope-limit-production-near-melting-2026-09-29",
+   "campaign": "scope-limit-production-near-melting",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C23_fault_study_chain"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:4",
+     "link": "file_path",
+     "evidence": "phase_c/production/fault_catalog/FAULT_CATALOG.md sits with phase_c/production/fault_catalog/{inject_faults.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:4",
+     "to": "L:5",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    },
+    {
+     "from": "L:5",
+     "to": "L:24",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    }
+   ]
+  },
+  {
+   "seq": 47,
+   "kind": "batch_result",
+   "op_id": "batch-nano-sigec-doping-2026-09-29-M1",
+   "campaign": "nano-sigec-doping-2026-09-29",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C2_carbon_leaves_lattice"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1",
+     "to": "L:47",
+     "link": "commits_output",
+     "evidence": "10 files nano_sigec/m1/out/*.json committed at ledger 47"
+    }
+   ]
+  },
+  {
+   "seq": 48,
+   "kind": "gate_failure",
+   "op_id": "gate-nano-sigec-doping-2026-09-29-M1b",
+   "campaign": "nano-sigec-doping-2026-09-29",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C5_size_misfit_delta_C"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1",
+     "to": "L:48",
+     "link": "file_path",
+     "evidence": "nano_sigec/m1/m1_summary.json sits with nano_sigec/{analyze_sigec.py, summarize_m1.py} which read MACE_M1"
+    }
+   ]
+  },
+  {
+   "seq": 49,
+   "kind": "analysis_result",
+   "op_id": "analysis-nano-sigec-doping-2026-09-29",
+   "campaign": "nano-sigec-doping-2026-09-29",
+   "first_tier": "T1_plus_prose_citations",
+   "claims": [
+    "C2_carbon_leaves_lattice",
+    "C3_carbon_trend_with_Ge",
+    "C4_carbon_prefers_Si_rich_shells",
+    "C5_size_misfit_delta_C"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1",
+     "to": "L:49",
+     "link": "file_path",
+     "evidence": "nano_sigec/results/sigec_results.json sits with nano_sigec/{analyze_sigec.py, summarize_m1.py} which read MACE_M1"
+    }
+   ]
+  },
+  {
+   "seq": 53,
+   "kind": "preregistration",
+   "op_id": "prereg-nano-sigec-m1c-converged-2026-09-30",
+   "campaign": "nano-sigec-m1c-converged-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C1_lattice_gate"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1",
+     "to": "L:53",
+     "link": "file_path",
+     "evidence": "nano_sigec/m1c/m1c_design.json sits with nano_sigec/m1c/{summarize_m1c.py} which read MACE_M1"
+    }
+   ]
+  },
+  {
+   "seq": 54,
+   "kind": "batch_result",
+   "op_id": "batch-nano-sigec-m1c-converged-2026-09-30",
+   "campaign": "nano-sigec-m1c-converged-2026-09-30",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C1_lattice_gate",
+    "C2_carbon_leaves_lattice"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:54",
+     "link": "commits_output",
+     "evidence": "51 files nano_sigec/m1c/out/*.json committed at ledger 54"
+    }
+   ]
+  },
+  {
+   "seq": 55,
+   "kind": "shard_operation",
+   "op_id": "m1c-strengthen-where-carbon-goes-2026-09-30",
+   "campaign": "nano-sigec-m1c-converged-2026-09-30",
+   "first_tier": "T1_plus_prose_citations",
+   "claims": [
+    "C1_lattice_gate",
+    "C2_carbon_leaves_lattice",
+    "C3_carbon_trend_with_Ge",
+    "C4_carbon_prefers_Si_rich_shells",
+    "C5_size_misfit_delta_C",
+    "C6_screening_pick"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1",
+     "to": "L:55",
+     "link": "file_path",
+     "evidence": "nano_sigec/m1c/m1c_summary.json sits with nano_sigec/m1c/{summarize_m1c.py} which read MACE_M1"
+    }
+   ]
+  },
+  {
+   "seq": 58,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-small-sic-md-2026-09-30",
+   "campaign": "sigec-small-sic-md-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C4_carbon_prefers_Si_rich_shells"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    }
+   ]
+  },
+  {
+   "seq": 59,
+   "kind": "batch_result",
+   "op_id": "batch-sigec-small-sic-md-2026-09-30",
+   "campaign": "sigec-small-sic-md-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:59",
+     "link": "same_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 60,
+   "kind": "gate_failure",
+   "op_id": "gates-sigec-small-sic-md-2026-09-30",
+   "campaign": "sigec-small-sic-md-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C24_records_without_mace_quantity"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:60",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md_results.json sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    }
+   ]
+  },
+  {
+   "seq": 61,
+   "kind": "shard_operation",
+   "op_id": "decision-sigec-small-sic-md-2026-09-30",
+   "campaign": "sigec-small-sic-md-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C6_screening_pick",
+    "C7_ge_saving"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:61",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    }
+   ]
+  },
+  {
+   "seq": 62,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-si-zone-2026-09-30",
+   "campaign": "sigec-si-zone-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C4_carbon_prefers_Si_rich_shells",
+    "C8_zone_PrZ1"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:62",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 63,
+   "kind": "preregistration",
+   "op_id": "prereg-p1-head-to-head-2026-09-30",
+   "campaign": "p1-head-to-head-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C12_h2h_mfgp_pick"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:63",
+     "link": "file_path",
+     "evidence": "phase_c/head_to_head/h2h_design.json sits with phase_c/head_to_head/{head_to_head.py} which read MACE_P4B"
+    }
+   ]
+  },
+  {
+   "seq": 64,
+   "kind": "preregistration",
+   "op_id": "prereg-p3-mace-hidden-subset-2026-09-30",
+   "campaign": "p3-mace-hidden-subset-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C13_P3_Q1",
+    "C14_P3_Q2",
+    "C15_P3_Q3",
+    "C16_P3_Q4",
+    "C17_P3_Q5"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:64",
+     "link": "file_path",
+     "evidence": "p3_mace/chpc/points.json sits with p3_mace/{mace_rnemd.py} which read MACE_P4B"
+    }
+   ]
+  },
+  {
+   "seq": 65,
+   "kind": "design",
+   "op_id": "reveal-hidden-p3-mace-2026-09-30",
+   "campaign": "p3-mace-hidden-subset-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:64",
+     "link": "file_path",
+     "evidence": "p3_mace/chpc/points.json sits with p3_mace/{mace_rnemd.py} which read MACE_P4B"
+    },
+    {
+     "from": "L:64",
+     "to": "L:65",
+     "link": "same_campaign",
+     "evidence": "p3-mace-hidden-subset-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 66,
+   "kind": "deviation",
+   "op_id": "deviation-h2h-D1-2026-09-30",
+   "campaign": "p1-head-to-head-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C12_h2h_mfgp_pick"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:63",
+     "link": "file_path",
+     "evidence": "phase_c/head_to_head/h2h_design.json sits with phase_c/head_to_head/{head_to_head.py} which read MACE_P4B"
+    },
+    {
+     "from": "L:63",
+     "to": "L:66",
+     "link": "same_campaign",
+     "evidence": "p1-head-to-head-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 67,
+   "kind": "commit",
+   "op_id": "commit-h2h-bte-oracle-2026-09-30",
+   "campaign": "p1-head-to-head-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C12_h2h_mfgp_pick"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:63",
+     "link": "file_path",
+     "evidence": "phase_c/head_to_head/h2h_design.json sits with phase_c/head_to_head/{head_to_head.py} which read MACE_P4B"
+    },
+    {
+     "from": "L:63",
+     "to": "L:67",
+     "link": "same_campaign",
+     "evidence": "p1-head-to-head-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 68,
+   "kind": "observation",
+   "op_id": "observation-p3-mace-gradient-2026-09-30",
+   "campaign": "p3-mace-hidden-subset-2026-09-30",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:64",
+     "link": "file_path",
+     "evidence": "p3_mace/chpc/points.json sits with p3_mace/{mace_rnemd.py} which read MACE_P4B"
+    },
+    {
+     "from": "L:64",
+     "to": "L:68",
+     "link": "same_campaign",
+     "evidence": "p3-mace-hidden-subset-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 69,
+   "kind": "batch_result",
+   "op_id": "batch-sigec-si-zone-2026-09-30",
+   "campaign": "sigec-si-zone-2026-09-30",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C8_zone_PrZ1"
+   ],
+   "predicted_class": [
+    "decision may flip"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_Z1",
+     "to": "L:69",
+     "link": "commits_output",
+     "evidence": "19 files nano_sigec/si_zone/chpc/out/*.json committed at ledger 69"
+    }
+   ]
+  },
+  {
+   "seq": 70,
+   "kind": "shard_operation",
+   "op_id": "si-zone-decision-2026-09-30",
+   "campaign": "sigec-si-zone-2026-09-30",
+   "first_tier": "T1_plus_prose_citations",
+   "claims": [
+    "C7_ge_saving",
+    "C8_zone_PrZ1",
+    "C9_zone_decision"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_Z1",
+     "to": "L:70",
+     "link": "file_path",
+     "evidence": "nano_sigec/si_zone/zone_results.json sits with nano_sigec/si_zone/{analyze_zone.py, apply_zone_decision.py, preregister_zone.py} which read MACE_Z1"
+    }
+   ]
+  },
+  {
+   "seq": 71,
+   "kind": "observation",
+   "op_id": "ledger-rehash-seq70-2026-09-30",
+   "campaign": "sigec-si-zone-2026-09-30",
+   "first_tier": "T1_plus_prose_citations",
+   "claims": [
+    "C24_records_without_mace_quantity"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_Z1",
+     "to": "L:69",
+     "link": "commits_output",
+     "evidence": "19 files nano_sigec/si_zone/chpc/out/*.json committed at ledger 69"
+    },
+    {
+     "from": "L:69",
+     "to": "L:71",
+     "link": "same_campaign",
+     "evidence": "sigec-si-zone-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 72,
+   "kind": "batch_result",
+   "op_id": "batch-p3-mace-hidden-subset-2026-09-30",
+   "campaign": "p3-mace-hidden-subset-2026-09-30",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C13_P3_Q1",
+    "C14_P3_Q2",
+    "C15_P3_Q3",
+    "C16_P3_Q4",
+    "C17_P3_Q5"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:72",
+     "link": "file_path",
+     "evidence": "p3_mace/raw/out/H_x0.1_C0.01_clus_B_T300.json sits with p3_mace/{mace_rnemd.py} which read MACE_P4B"
+    }
+   ]
+  },
+  {
+   "seq": 73,
+   "kind": "analysis",
+   "op_id": "analysis-p3-mace-hidden-subset-2026-09-30",
+   "campaign": "p3-mace-hidden-subset-2026-09-30",
+   "first_tier": "T1_plus_prose_citations",
+   "claims": [
+    "C13_P3_Q1",
+    "C14_P3_Q2",
+    "C15_P3_Q3",
+    "C16_P3_Q4",
+    "C17_P3_Q5"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4B",
+     "to": "L:73",
+     "link": "file_path",
+     "evidence": "p3_mace/results/p3_mace_posthoc.json sits with p3_mace/{mace_rnemd.py} which read MACE_P4B"
+    }
+   ]
+  },
+  {
+   "seq": 74,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-light-dopants-2026-10-01",
+   "campaign": "sigec-light-dopants-2026-10-01",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C21_light_dopants"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:74",
+     "link": "file_path",
+     "evidence": "nano_sigec/light_dopants/light_dopants_design.json sits with nano_sigec/light_dopants/{analyze_light_dopants.py} which read MACE_M1C"
+    }
+   ]
+  },
+  {
+   "seq": 75,
+   "kind": "analysis",
+   "op_id": "analysis-sigec-light-dopants-2026-10-01",
+   "campaign": "sigec-light-dopants-2026-10-01",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C21_light_dopants"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:75",
+     "link": "file_path",
+     "evidence": "nano_sigec/light_dopants/light_dopants_results.json sits with nano_sigec/light_dopants/{analyze_light_dopants.py} which read MACE_M1C"
+    }
+   ]
+  },
+  {
+   "seq": 76,
+   "kind": "shard_operation",
+   "op_id": "decision-sigec-light-dopants-2026-10-01",
+   "campaign": "sigec-light-dopants-2026-10-01",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C5_size_misfit_delta_C",
+    "C21_light_dopants"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:74",
+     "link": "file_path",
+     "evidence": "nano_sigec/light_dopants/light_dopants_design.json sits with nano_sigec/light_dopants/{analyze_light_dopants.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:74",
+     "to": "L:76",
+     "link": "same_campaign",
+     "evidence": "sigec-light-dopants-2026-10-01"
+    }
+   ]
+  },
+  {
+   "seq": 77,
+   "kind": "shard_operation",
+   "op_id": "scope-density-edge-pick-2026-10-01",
+   "campaign": "sigec-small-sic-md-2026-09-30",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C6_screening_pick"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:77",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    }
+   ]
+  },
+  {
+   "seq": 78,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-small-sic-md-x03-2026-10-01",
+   "campaign": "sigec-small-sic-md-x03-2026-10-01",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:78",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 79,
+   "kind": "batch_result",
+   "op_id": "batch-sigec-small-sic-md-x03-2026-10-01",
+   "campaign": "sigec-small-sic-md-x03-2026-10-01",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:78",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:78",
+     "to": "L:79",
+     "link": "same_campaign",
+     "evidence": "sigec-small-sic-md-x03-2026-10-01"
+    }
+   ]
+  },
+  {
+   "seq": 80,
+   "kind": "shard_operation",
+   "op_id": "decision-sigec-small-sic-md-x03-2026-10-01",
+   "campaign": "sigec-small-sic-md-x03-2026-10-01",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C6_screening_pick"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:78",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:78",
+     "to": "L:80",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    }
+   ]
+  },
+  {
+   "seq": 81,
+   "kind": "preregistration",
+   "op_id": "prereg-phase-c-detector-v2-2026-10-01",
+   "campaign": "phase-c-detector-v2-2026-10-01",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C19_P2_P08_fault"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:81",
+     "link": "file_path",
+     "evidence": "phase_c/detector_v2/build_rows_v2.py sits with phase_c/detector_v2/{fault_study_v2.py} which read MACE_CONST"
+    }
+   ]
+  },
+  {
+   "seq": 82,
+   "kind": "batch_result",
+   "op_id": "commit-detector-v2-descriptors",
+   "campaign": "phase-c-detector-v2-2026-10-01",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:81",
+     "link": "file_path",
+     "evidence": "phase_c/detector_v2/build_rows_v2.py sits with phase_c/detector_v2/{fault_study_v2.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:81",
+     "to": "L:82",
+     "link": "same_campaign",
+     "evidence": "phase-c-detector-v2-2026-10-01"
+    }
+   ]
+  },
+  {
+   "seq": 83,
+   "kind": "deviation",
+   "op_id": "deviation-D3-phase-c-detector-v2-2026-10-01",
+   "campaign": "phase-c-detector-v2-2026-10-01",
+   "first_tier": "T2_plus_file_paths",
+   "claims": [
+    "C23_fault_study_chain"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:83",
+     "link": "file_path",
+     "evidence": "phase_c/detector_v2/detector_v2.py sits with phase_c/detector_v2/{fault_study_v2.py} which read MACE_CONST"
+    }
+   ]
+  },
+  {
+   "seq": 84,
+   "kind": "commitment",
+   "op_id": "decision-phase-c-detector-v2-2026-10-01",
+   "campaign": "phase-c-detector-v2-2026-10-01",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C19_P2_P08_fault"
+   ],
+   "predicted_class": [
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_CONST",
+     "to": "L:81",
+     "link": "file_path",
+     "evidence": "phase_c/detector_v2/build_rows_v2.py sits with phase_c/detector_v2/{fault_study_v2.py} which read MACE_CONST"
+    },
+    {
+     "from": "L:81",
+     "to": "L:84",
+     "link": "same_campaign",
+     "evidence": "phase-c-detector-v2-2026-10-01"
+    }
+   ]
+  },
+  {
+   "seq": 103,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-small-sic-md-r30-2026-10-06",
+   "campaign": "sigec-small-sic-md-r30-2026-10-06",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    }
+   ]
+  },
+  {
+   "seq": 104,
+   "kind": "batch_result",
+   "op_id": "batch-sigec-small-sic-md-r30-2026-10-06",
+   "campaign": "sigec-small-sic-md-r30-2026-10-06",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:104",
+     "link": "same_campaign",
+     "evidence": "sigec-small-sic-md-r30-2026-10-06"
+    }
+   ]
+  },
+  {
+   "seq": 105,
+   "kind": "shard_operation",
+   "op_id": "decision-sigec-small-sic-md-r30-2026-10-06",
+   "campaign": "sigec-small-sic-md-r30-2026-10-06",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C6_screening_pick",
+    "C7_ge_saving"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:105",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    }
+   ]
+  },
+  {
+   "seq": 106,
+   "kind": "preregistration",
+   "op_id": "prereg-sigec-small-sic-md-r50-2026-10-07",
+   "campaign": "sigec-small-sic-md-r50-2026-10-07",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:106",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-r30-2026-10-06"
+    }
+   ]
+  },
+  {
+   "seq": 108,
+   "kind": "batch_result",
+   "op_id": "batch-sigec-small-sic-md-r50-2026-10-07",
+   "campaign": "sigec-small-sic-md-r50-2026-10-07",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:106",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-r30-2026-10-06"
+    },
+    {
+     "from": "L:106",
+     "to": "L:108",
+     "link": "same_campaign",
+     "evidence": "sigec-small-sic-md-r50-2026-10-07"
+    }
+   ]
+  },
+  {
+   "seq": 109,
+   "kind": "gate_failure",
+   "op_id": "gates-sigec-small-sic-md-r50-2026-10-07",
+   "campaign": "sigec-small-sic-md-r50-2026-10-07",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": "reached only through a shared or parent campaign name; no MACE quantity in its rule",
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:106",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-r30-2026-10-06"
+    },
+    {
+     "from": "L:106",
+     "to": "L:109",
+     "link": "same_campaign",
+     "evidence": "sigec-small-sic-md-r50-2026-10-07"
+    }
+   ]
+  },
+  {
+   "seq": 110,
+   "kind": "shard_operation",
+   "op_id": "decision-sigec-small-sic-md-r50-2026-10-07",
+   "campaign": "sigec-small-sic-md-r50-2026-10-07",
+   "first_tier": "T3_plus_campaign_names",
+   "claims": [
+    "C6_screening_pick",
+    "C7_ge_saving"
+   ],
+   "predicted_class": [
+    "magnitude only",
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_M1C",
+     "to": "L:58",
+     "link": "file_path",
+     "evidence": "nano_sigec/small_sic/md/points.txt sits with nano_sigec/small_sic/{decision_robustness.py} which read MACE_M1C"
+    },
+    {
+     "from": "L:58",
+     "to": "L:103",
+     "link": "parent_campaign",
+     "evidence": "sigec-small-sic-md-2026-09-30"
+    },
+    {
+     "from": "L:103",
+     "to": "L:105",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    },
+    {
+     "from": "L:105",
+     "to": "L:110",
+     "link": "text_citation",
+     "evidence": "free-text ledger citation"
+    }
+   ]
+  },
+  {
+   "seq": 121,
+   "kind": "shard_operation",
+   "op_id": "retro-exceptional-si-rich-zone",
+   "campaign": "retro-exceptional-si-rich-zone",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C8_zone_PrZ1",
+    "C9_zone_decision"
+   ],
+   "predicted_class": [
+    "decision may flip",
+    "magnitude only"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_Z1",
+     "to": "L:69",
+     "link": "commits_output",
+     "evidence": "19 files nano_sigec/si_zone/chpc/out/*.json committed at ledger 69"
+    },
+    {
+     "from": "L:69",
+     "to": "L:121",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    }
+   ]
+  },
+  {
+   "seq": 126,
+   "kind": "commitment",
+   "op_id": "p4-t1-design",
+   "campaign": "p4-t1-design",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C22_P4_T1_live"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4T1",
+     "to": "L:126",
+     "link": "commits_output",
+     "evidence": "2 files p4_tskg/T1_md/bench/*.json committed at ledger 126"
+    }
+   ]
+  },
+  {
+   "seq": 127,
+   "kind": "deviation",
+   "op_id": "p4-t1-placement-1",
+   "campaign": "p4-t1-placement-1",
+   "first_tier": "T0_explicit",
+   "claims": [
+    "C22_P4_T1_live"
+   ],
+   "predicted_class": [
+    "unaffected"
+   ],
+   "default_reason": null,
+   "path": [
+    {
+     "from": "M:MACE_P4T1",
+     "to": "L:126",
+     "link": "commits_output",
+     "evidence": "2 files p4_tskg/T1_md/bench/*.json committed at ledger 126"
+    },
+    {
+     "from": "L:126",
+     "to": "L:127",
+     "link": "explicit_field",
+     "evidence": "payload seq field"
+    }
+   ]
+  }
+ ],
+ "reached_figure_scripts": [
+  "papers/paper1_j_mater_chem_a/make_final_law_figure.py",
+  "papers/paper1_j_mater_chem_a/make_hypergraph_figure.py",
+  "papers/paper1_j_mater_chem_a/make_sigec_figure.py",
+  "papers/paper1_j_mater_chem_a/regen_figs/fig_final_law.py",
+  "papers/paper1_j_mater_chem_a/regen_figs/fig_kappa_parties.py",
+  "papers/paper1_j_mater_chem_a/regen_figs/fig_sigec.py",
+  "papers/paper1_j_mater_chem_a/regen_figs/fig_sigec_structures.py"
+ ],
+ "paper_statements": {
+  "n_lines": 105,
+  "by_paper": {
+   "P1": 54,
+   "P2": 34,
+   "P3": 17
+  },
+  "by_link": {
+   "keyword_MACE": 65,
+   "ledger_citation": 40
+  },
+  "lines": [
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 636,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "B or P, MACE-MP MD, trained on 71 planner points and scored on 16 hidden"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 691,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "the SiGeC and dopant space computed with the MACE-MP foundation"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 795,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\textbf{Foundation-potential MD.} The MACE-MP-0 foundation"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 802,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "source's provenance records that MACE-MP-0 derives from Materials Project"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 810,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "bulk statement, which belongs to the BTE source. The MACE points also"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1018,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     81
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "any structure was measured (ledger entry 81): one structure rebuild per"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1048,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     84
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "check for simulation sources (ledger entry 84); one crash fix was disclosed"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1049,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     83
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "before the trials were read (ledger entry 83)."
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1085,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "ones. (c) Relaxed MACE-MP-0 \\ce{Si_{0.8}Ge_{0.2}} with four C on lattice"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1123,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     1
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit"
+    ],
+    "text": "Entry & v1 & v2 & v1 & v2 \\\\"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1298,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "(diamonds), and foundation-potential (MACE-MP) MD at finite box size"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1392,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\textbf{Carbon leaves the lattice.} A MACE-MP-0 gate asked where carbon"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1411,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "and the MACE misfit, within 1.3\\% of modified Vegard at $x=0$, replaced"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1472,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "experiment (Vegard line), MACE-MP-0 (0.4--2.0\\% above experiment, as"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1474,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "elements; open: the $x=0.3$ box, 0.05\\% below Vegard); MACE-MP-0 bars"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1476,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "contraction per carbon on lattice sites: converged MACE slopes (lines"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1478,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [
+     48
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "first gate was unvalidated (dashed, ledger entry 48); the MACE slopes"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1479,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     55
+    ],
+    "first_tier_of_cited": [
+     "T1_plus_prose_citations"
+    ],
+    "text": "replaced it at entry 55. (f) The screening pick after each ledger"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1491,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "relaxed MACE-MP-0 \\ce{Si_{0.8}Ge_{0.2}} cell with four C on lattice"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1501,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "3C-SiC bonds from the same potential, so the PBE offset of MACE-MP-0"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1547,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     103,
+     104,
+     105,
+     106,
+     108,
+     109,
+     110
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "fixed volume fraction (ledger entries 103--110, below); the earlier"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1561,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     77
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "(ledger entry 77) rather than chosen, and the pipeline named the"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1563,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     78
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "simulation repeated in a \\ce{Si_{0.7}Ge_{0.3}} host (ledger entry 78,"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1570,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     79,
+     80
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "entries 79--80). Carbon content and particle size were the same at every"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1582,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     74,
+     75,
+     76
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "introduce (ledger entries 74--76) gave the same answer for isolated"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1619,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     110
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "dynamics up to 5\\,nm (ledger entry 110), carried beyond 5\\,nm without"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1622,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "drop below $x=0.2$ is the germanium saving. (c) MACE-MP-0 energies of carbon leaving the lattice"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1668,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     62
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "run (ledger entry 62). Its answer closed the episode as expansion rather"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1675,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     69,
+     70
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit",
+     "T1_plus_prose_citations"
+    ],
+    "text": "the carbon claims (ledger entries 69 and 70). The zone that raised"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1692,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     103
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "that design, a pre-registered check (ledger entry 103; eight runs)"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1704,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     105
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "claim (entry 105): the saving is 14--16\\% at 2.5\\,nm and 7--9\\% at"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1706,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     106
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "still rested on that slope, a further registered check (entries 106 and"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1755,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "three unplanted faults: literature rows for other materials, MACE values"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1761,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MD, MACE MD and almaBTE as increasing fidelities; the same with the"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1774,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MF-GP is the multi-fidelity Gaussian process (Tersoff MD, MACE MD and"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 1820,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "exposed it; the pooled fit's residuals did expose the two MACE rows, without"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2055,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "and the same-protocol MACE offset) but its full error-correlation"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2301,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\textbf{Where carbon goes.} MACE-MP-0 (medium)\\cite{batatia2024macemp}"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2316,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MACE-MP-0,\\cite{batatia2024macemp} equilibrated it for 8\\,ps with a"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2352,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "points of the SiGeC and dopant MACE-MP campaign (below) as a second"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2360,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "extraction, MACE, and development; University of Utah CHPC guest"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2361,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "partitions for the production MD, BTE, SiGeC, and MACE relaxation"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2373,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "hash, scattering analysis and results, the MACE relaxation inputs and"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/draft.tex",
+    "line": 2387,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "references (PySR, SISSO/TorchSisso, AI Feynman, Feyn, LAMMPS, MACE,"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 115,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "size misfit (MACE-MP-0 values, Section~S3) and $\\varepsilon$"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 200,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\textbf{Second system.} For the SiGeC and dopant MACE-MP study the"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 237,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "48 & S5 & MACE force gate & gate failure & rule & carbon energies unvalidated; Vegard fallback \\\\"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 262,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     61
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "of ledger entry 61 to the radius-dependent contrast measured at entries"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 268,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\caption{Where carbon goes: converged MACE-MP-0 results (51 relaxations,"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 301,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     61,
+     110
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths",
+     "T3_plus_campaign_names"
+    ],
+    "text": "1\\,at\\% C in its best form reaches carbon-free $x=0.2$ $\\kappa_L$ at $x\\le0.15$ & holds: $x=0.099$ (2.5\\,nm SiC, stiffness contrast); still held at the density contrast of entry 61 ($x=0.14$); as 2.5\\"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 318,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     58,
+     59,
+     60,
+     61
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths",
+     "T3_plus_campaign_names"
+    ],
+    "text": "entries 58--61) placed the contrast at the density bound; the"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 319,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     103,
+     104,
+     105,
+     106,
+     108,
+     109,
+     110
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "fixed-volume-fraction checks at 3 and 5\\,nm (entries 103--110) showed"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 320,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     110
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "it falls further with radius; the first column (ledger entry 110) is"
+   },
+   {
+    "paper": "P1",
+    "file": "papers/paper1_j_mater_chem_a/esi_body.tex",
+    "line": 335,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     77,
+     78,
+     79,
+     80
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths",
+     "T3_plus_campaign_names"
+    ],
+    "text": "{\\footnotesize $^{a}$The earlier entry $x=0.3$ came from holding the density contrast at its $x=0.2$ value; recomputed per composition with a density-only contrast the optimum moves to $x=0.5$, so the"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 421,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "non-equilibrium protocol with the MACE-MP-0"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 574,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "with the MACE-MP-0 machine-learned potential,\\cite{batatia2022mace,batatia2024macemp}"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 585,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "Information); Kind: entry type; MACE: the MACE-MP-0 machine-learned"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 596,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "47 & raw commitment & 20 MACE gate outputs \\\\"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 607,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "69 & raw commitment & 19 MACE relaxations and 8 MD runs \\\\"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 616,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "scattering term was evaluated. The MACE stage then passed its first gate"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 678,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     47,
+     48,
+     49
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit",
+     "T1_plus_prose_citations",
+     "T2_plus_file_paths"
+    ],
+    "text": "design (entries 46--49 in Table~\\ref{tab:sigec}); right group: the converged"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 679,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     53,
+     54,
+     55
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit",
+     "T1_plus_prose_citations",
+     "T2_plus_file_paths"
+    ],
+    "text": "rerun (entries 53--55). The shaded interval is the period in which the"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 696,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     106,
+     108
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "14 to 16\\% less germanium after the two revisions below (8 to 9\\% at 5\\,nm, measured directly by a third registered check, entries 106 and 108--110); and light B or P doping at or below"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 716,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     59
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "the model form, or downweight), its 14 raw outputs committed (entry 59),"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 717,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     60
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "a narrowly failed exclusion gate recorded (entry 60), and the rule"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 718,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     61
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "applied (entry 61): \\emph{downweight}, with the germanium saving moving"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 720,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     103
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "(entry 103) held the volume fraction fixed while the particle radius grew"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 722,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     104
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "open. Its eight raw outputs were committed (entry 104) and the rule"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 723,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     105
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "applied (entry 105): \\emph{correct}, because the contrast keeps falling"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 737,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     62
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "in response and that a follow-up was registered first (entry 62). The"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 740,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     69,
+     70
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit",
+     "T1_plus_prose_citations"
+    ],
+    "text": "the strengthen decision it led to (entries 69--70)."
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 757,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     81
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "inputs, seven predictions and an adoption rule (entry 81) before any"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 759,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     82
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "next (entry 82). The first trial pass then crashed on a corrected"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 761,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     83
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "a deviation (entry 83) with the new code hash and a statement of what had"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 764,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     84
+    ],
+    "first_tier_of_cited": [
+     "T3_plus_campaign_names"
+    ],
+    "text": "the rule applied (entry 84: adopted; one prediction refuted and kept)."
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 903,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     4
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "ledger of 125 entries, in 4.9\\,s"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 948,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "(MACE-MP-0 medium in double precision, from a pinned software"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 995,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     121
+    ],
+    "first_tier_of_cited": [
+     "T0_explicit"
+    ],
+    "text": "labels (entries 119--121), which the verifier reports separately and never"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 999,
+    "link": "ledger_citation",
+    "cites_reached_entries": [
+     24
+    ],
+    "first_tier_of_cited": [
+     "T2_plus_file_paths"
+    ],
+    "text": "its runs (entries 19, 26, 27 and 62, 69, 70), whereas the amorphous probes"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 1288,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\textbf{SiGeC campaign.} Where carbon goes was computed with MACE-MP-0"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 1325,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "3C-SiC sphere in Si with MACE-MP-0 (19 relaxations) and ran 8 Tersoff"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 1340,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MACE relaxations and 8 MD runs (Table~\\ref{tab:sigec})."
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 1348,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "$\\rho$ over in-domain points and its coefficient of variation. The MACE"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/draft.tex",
+    "line": 1359,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "the endpoints. The MACE stage was checked against experimental lattice"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/esi_body.tex",
+    "line": 107,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "Contemporaneous & commit before reveal; ledger time per entry; RFC~3161 token over the ledger head & raw MACE outputs committed 22\\,s before the gate-failure entry and before any analysis \\\\"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/esi_body.tex",
+    "line": 137,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "(i) MACE size misfit at $x=0$ within 30\\% of modified Vegard & pass ($-0.6$\\%), unvalidated until rerun \\\\"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/esi_body.tex",
+    "line": 159,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\captionof{table}{Converged MACE-MP-0 results per host composition (three host configurations each; ranges over configurations).}"
+   },
+   {
+    "paper": "P2",
+    "file": "papers/paper2_adv_intell_discov/annex_ledger_table.tex",
+    "line": 25,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "47 & 2026-09-29 16:25 & raw commitment & \\texttt{a7178c1f1693} & MACE gate outputs, 20 files, Merkle root \\\\"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 296,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "independent evidence (H5 refuted).} On 16 hidden MACE molecular dynamics recipes,"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 367,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MACE-MP-0\\cite{batatia2024macemp} relaxations of 51 cells (Si$_{1-x}$Ge$_x$"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 384,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "carbon-bearing recipes were run with MACE-MP-0"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 614,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "measured by M\\\"uller-Plathe molecular dynamics with the MACE-MP-0"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 623,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "\\caption{\\ Batches scored on the 16 hidden MACE molecular dynamics recipes of the SiGe(C) box (Ge content, carbon content and form, B or P dopant, temperature). RMSE is the root-mean-square error of t"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 668,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "fitted to the 71 planner runs of the MACE study: of Ge content,"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 769,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "dynamics with the MACE-MP-0 potential, first-principles Boltzmann"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 780,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "to 21.8~h, because the expensive MACE runs are then no longer needed."
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 850,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "materials side, the MACE energies in which substitutional carbon gains"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 871,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "against measurements; the independent check on MACE molecular dynamics"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 887,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "run hardly depends on the recipe (89 MACE runs: median 91\\,min without"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 930,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "molecular dynamics used MACE-MP-0 instead. The SiC contrast was revised"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 1045,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "MACE-MP-0 relaxations (hosts at $x = 0$, 0.2 and 0.5 with"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 1069,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "check reused the host modes and MACE energies above and needed no new"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 1129,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "the microcanonical ensemble with MACE-MP-0 (small model, single"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 1171,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "converged MACE energies they reuse. The supporting calculations of the"
+   },
+   {
+    "paper": "P3",
+    "file": "papers/paper3_mol_syst_des_eng/draft.tex",
+    "line": 1172,
+    "link": "keyword_MACE",
+    "cites_reached_entries": [],
+    "first_tier_of_cited": [],
+    "text": "response model (grain-boundary calibration, MACE relaxations, embedded-SiC"
+   }
+  ]
+ },
+ "claims": [
+  {
+   "id": "C1_lattice_gate",
+   "ledger_seqs": [
+    53,
+    54,
+    55
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "gate M1c-c (and M1a): bulk lattice constants of Si, Ge, 3C-SiC within 2.5% of experiment; passing it is what lifted the 'unvalidated' flag on the where-carbon-goes energies (strengthen, ledger 55)",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "Ge sits at +2.04% against a 2.5% gate (margin 0.46 percentage points). Newer foundation models are still fitted to PBE-family data, and PBE itself overestimates the Ge lattice constant by about 2%, so a shift of half a percentage point is within a version change.",
+   "predicted_outcome": "gate passes again (Ge between +1.5% and +2.5%); P(fail) about 0.3",
+   "refuted_if": "Ge lattice constant from the new model more than 2.5% above 5.658 A (gate fails, the strengthen of ledger 55 reverts to 'unvalidated'); for the passing prediction, also refuted if Ge falls below +1.5%",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {
+    "rel_lattice_error": {
+     "Si": 0.0044995556692717376,
+     "Ge": 0.020388278267367888,
+     "SiC": 0.0037012571618970647
+    },
+    "gate": 0.025
+   }
+  },
+  {
+   "id": "C2_carbon_leaves_lattice",
+   "ledger_seqs": [
+    47,
+    49,
+    54,
+    55
+   ],
+   "papers": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "statement": "carbon on lattice sites gains energy by leaving to form SiC (dE_prec < -0.5 eV per C at x = 0, 0.2, 0.5): P1 'Carbon leaves the lattice', prediction PrC2 (sign part)",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "dE_prec = -1.44, -1.55, -1.68 eV at x = 0, 0.2, 0.5; margin to the registered -0.5 eV threshold 0.94 eV and to the sign 1.44 eV, against a plausible version shift of 0.3 eV",
+   "predicted_outcome": "sign and threshold hold at every x; values move by 0.05-0.3 eV",
+   "refuted_if": "dE_prec above -0.5 eV at any x (PrC2 verdict flips) or above 0 eV (carbon would stay on lattice sites)",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {
+    "dE_prec_eV": {
+     "0": -1.4361883432836826,
+     "0.2": -1.5456206004463866,
+     "0.5": -1.677953855445071
+    }
+   }
+  },
+  {
+   "id": "C3_carbon_trend_with_Ge",
+   "ledger_seqs": [
+    49,
+    55
+   ],
+   "papers": [
+    "P1"
+   ],
+   "statement": "PrC2 trend part: carbon precipitation is more favourable at x = 0.5 than at x = 0",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "difference dE_prec(0.5) - dE_prec(0) = -0.24 eV, below the 0.3 eV plausible shift; Ge-rich and Ge-free cells need not shift together",
+   "predicted_outcome": "trend holds (x = 0.5 more negative than x = 0 by 0.1-0.4 eV)",
+   "refuted_if": "dE_prec(0.5) >= dE_prec(0) under the new model",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {
+    "difference_eV": -0.24176551216138842
+   }
+  },
+  {
+   "id": "C4_carbon_prefers_Si_rich_shells",
+   "ledger_seqs": [
+    49,
+    55,
+    58,
+    62
+   ],
+   "papers": [
+    "P1"
+   ],
+   "statement": "PrC2b: substitutional C prefers Si-rich neighbour shells (dE_site > 0 at x = 0.2, 0.5); this motivated the Si-rich pocket imposed around SiC particles in the small-SiC MD design (ledger 58)",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "dE_site = 0.21, 0.33 eV at x = 0.2, 0.5; the x = 0.2 margin (0.21 eV) is inside the 0.3 eV band",
+   "predicted_outcome": "sign holds at both x (values 0.1-0.4 eV)",
+   "refuted_if": "dE_site <= 0 at x = 0.2 or 0.5",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {
+    "dE_site_eV": {
+     "0.2": 0.21353853523396538,
+     "0.5": 0.3257626655912797
+    }
+   }
+  },
+  {
+   "id": "C5_size_misfit_delta_C",
+   "ledger_seqs": [
+    48,
+    49,
+    55,
+    57,
+    76
+   ],
+   "papers": [
+    "P1",
+    "P3"
+   ],
+   "statement": "substitutional size misfit delta_C (PrC1) and the substitutional strain upper bound it feeds",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "MACE delta_C lies within 6% of the modified-Vegard fallback that the design already carries; replacing it moved the strain upper bound by 1.4% (2.533 -> 2.497 W/mK, ledger 55); PrC3 records that SiC at R = 2.5 nm beats substitutional C even at eps = 39, so no pick reads delta_C",
+   "predicted_outcome": "delta_C within 10% of -0.394; every pick unchanged",
+   "refuted_if": "delta_C outside +/-30% of modified Vegard (PrC1 fails) or any screening pick changes",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {
+    "delta_C": {
+     "0": -0.3994270036029096,
+     "0.2": -0.4143787436167452,
+     "0.5": -0.37145543184352314
+    }
+   }
+  },
+  {
+   "id": "C6_screening_pick",
+   "ledger_seqs": [
+    55,
+    61,
+    77,
+    80,
+    105,
+    110
+   ],
+   "papers": [
+    "P1",
+    "P3"
+   ],
+   "statement": "recipe pick x = 0.3, 3 at% C as few-nm SiC (equilibrium-constrained and unconstrained picks)",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "the equilibrium constraint reads only the sign of dE_prec (margin 1.44 eV); the unconstrained pick is already a SiC form (PrC3), so even a sign change would not move it; the contrast sweep (small_sic/decision_robustness.json) kept x = 0.3, 3 at% C across the whole lam2 range; the radius correction (ledger 105, 110) rests on Tersoff particle MD, not on MACE",
+   "predicted_outcome": "pick unchanged (x = 0.3, 3 at% C, few-nm SiC)",
+   "refuted_if": "any change of x, carbon content or carbon form in the pick after rerunning analyze_sigec on the new summary",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C7_ge_saving",
+   "ledger_seqs": [
+    61,
+    70,
+    105,
+    110
+   ],
+   "papers": [
+    "P1"
+   ],
+   "statement": "Ge saving at equal kappa (13.7-16.2% at R = 2.5 nm after ledger 105/110)",
+   "predicted_class": "unaffected",
+   "reason_from_record": "computed from Tersoff particle MD and almaBTE modes with SiC forms; no MACE quantity enters the SiC scattering term; reached only through shared model code (analyze_sigec loads the MACE summary)",
+   "predicted_outcome": "numbers identical to the last digit after rerunning the analysis on the new MACE summary",
+   "refuted_if": "any change in the ledger-110 saving values",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C8_zone_PrZ1",
+   "ledger_seqs": [
+    62,
+    69,
+    70,
+    121
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "PrZ1 verdict: SiC attracts Ge at 6.5 A (dE = -0.091 eV; registered prediction of repulsion refuted)",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "innermost-bin energy -0.091 eV; a shift of +0.091 eV flips the sign, well inside the 0.3 eV band",
+   "predicted_outcome": "attraction holds (dE between -0.25 and -0.02 eV); P(flip) about 0.3",
+   "refuted_if": "dE(6.5 A) > +0.01 eV (repulsion, PrZ1 would pass)",
+   "settled_by": [
+    "R_Z1"
+   ],
+   "numbers": {
+    "dE_profile_eV": {
+     "6.5": -0.09113206740221358,
+     "7.5": -0.0656952110111888,
+     "8.5": 0.0006598311956622638,
+     "9.5": -0.0019668241275212495,
+     "10.5": 0.007504546364543785,
+     "11.5": -0.020337827658295282,
+     "12.5": -0.01650576775864465,
+     "13.5": -0.00811596264520631
+    }
+   }
+  },
+  {
+   "id": "C9_zone_decision",
+   "ledger_seqs": [
+    70,
+    121
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "Si-rich zone recorded as a quantified minor term; carbon claims stand (cancel < 0.2 at R = 2.5 and 5 nm)",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "cancel = 0.00, 0.00 with w_eq = 0.0 A. Replaying the registered formula: a repulsive shift confined to the bins that carry signal (d < 8.0 A) cannot reach the threshold at any size (full Ge depletion there gives w_eq = 2.0 A, cancel 0.04); only a uniform shift of 0.189 eV at every distance out to 13.5 A (w_eq = 7.35 A) flips the branch. Segregation energies are differences against far sites, and a version change acts on the interface chemistry, so a uniform far-field shift is the implausible case",
+   "predicted_outcome": "branch stays 'strengthen' (cancel < 0.2 at both radii)",
+   "refuted_if": "cancel >= 0.2 at either radius (branch becomes 'correct'), or |dE| >= 0.1 eV at any bin beyond 9 A",
+   "settled_by": [
+    "R_Z1"
+   ],
+   "numbers": {
+    "uniform_shift_needed_eV": 0.189,
+    "w_eq_at_flip_A": 7.35,
+    "near_field_only_max_w_eq_A": 2.0,
+    "near_field_only_max_cancel": {
+     "25.0": 0.044,
+     "50.0": 0.018
+    }
+   }
+  },
+  {
+   "id": "C10_party_offset",
+   "ledger_seqs": [
+    1
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "MACE-MD kappa sits at 0.55-0.58 x Tersoff at the same box and protocol (the measured party offset)",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "Deng et al. (2025) report systematic softening of universal potentials that later, larger training sets reduce; float32 force noise also lowers kappa; the offset is a level, carried as a scope label",
+   "predicted_outcome": "MACE/Tersoff ratio rises (towards 0.7-1.0) at both compositions",
+   "refuted_if": "ratio falls below 0.55 at either composition",
+   "settled_by": [
+    "R_P4B"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C11_composition_trend_crossmethod",
+   "ledger_seqs": [
+    1
+   ],
+   "papers": [
+    "P1"
+   ],
+   "statement": "composition trend kappa(0.15)/kappa(0.5) = 1.81 (MACE) vs 1.71 (Tersoff): alloy scattering is method-robust",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "alloy mass-disorder scattering is set by Si/Ge masses, which no potential changes",
+   "predicted_outcome": "ratio within 1.5-2.1",
+   "refuted_if": "ratio outside 1.5-2.1",
+   "settled_by": [
+    "R_P4B"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C12_h2h_mfgp_pick",
+   "ledger_seqs": [
+    63,
+    66,
+    67
+   ],
+   "papers": [
+    "P1"
+   ],
+   "statement": "head-to-head baseline rows that use the two MACE points as middle fidelity: MF-GP pick at 1100 K and the multi-fidelity BO replay (budget used, pick still moving)",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "the 1100 K minimum is shallow: x = 0.35-0.6 lie within 8% of the minimum; MF-GP picks {'C_MFGP_E0': 0.5, 'C2_MFGP_exp_target_E0': 0.55, 'C_MFGP_E1': 0.4, 'C2_MFGP_exp_target_E1': 0.4} moved when only the MACE level changed (104x unit slip corrected); the pipeline's own answer does not read MACE",
+   "predicted_outcome": "pipeline row unchanged; MF-GP pick moves by at most one grid step (0.05)",
+   "refuted_if": "pipeline row changes, or an MF-GP pick moves by more than 0.10 in x",
+   "settled_by": [
+    "R_P4B"
+   ],
+   "numbers": {
+    "mf_picks": {
+     "C_MFGP_E0": 0.5,
+     "C2_MFGP_exp_target_E0": 0.55,
+     "C_MFGP_E1": 0.4,
+     "C2_MFGP_exp_target_E1": 0.4
+    },
+    "flat_region_x": [
+     0.35,
+     0.6
+    ]
+   }
+  },
+  {
+   "id": "C13_P3_Q1",
+   "ledger_seqs": [
+    64,
+    72,
+    73
+   ],
+   "papers": [
+    "P3"
+   ],
+   "statement": "Q1 refuted: covering CA1 (15 runs) predicts hidden MACE-MD recipes no better than random 15-run batches",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "log RMSE CA1 0.119 vs random-15 median 0.087 (margin 0.032) is below the replicate-seed noise 0.083; the record's explanation (four of five factors below noise) would keep it refuted",
+   "predicted_outcome": "stays refuted (CA1 above the random median) as long as carbon and dopant stay below seed noise",
+   "refuted_if": "CA1 hidden log RMSE <= random-15 median",
+   "settled_by": [
+    "R_P3"
+   ],
+   "numbers": {
+    "margin": 0.03156056850964087,
+    "noise": 0.08266738647257411
+   }
+  },
+  {
+   "id": "C14_P3_Q2",
+   "ledger_seqs": [
+    64,
+    72,
+    73
+   ],
+   "papers": [
+    "P3"
+   ],
+   "statement": "Q2 holds: one-factor-at-a-time predicts worse than random 12-run batches",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "margin 0.022 in log RMSE, below the seed noise 0.083; pair coverage (54%) and pick regret (40%) are design properties and do not move",
+   "predicted_outcome": "holds",
+   "refuted_if": "OFAT hidden log RMSE <= random-12 median",
+   "settled_by": [
+    "R_P3"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C15_P3_Q3",
+   "ledger_seqs": [
+    64,
+    72,
+    73
+   ],
+   "papers": [
+    "P3"
+   ],
+   "statement": "Q3 refuted: dopant ranked 4th of 5 by permutation importance, not last",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "importances y_C 0.0024, dopant 0.0018, carbon form 0.0009 are all below seed noise; their order carries no information and can reorder under any change of the measurement",
+   "predicted_outcome": "Ge content first and temperature second again; the order of the last three changes with probability about 0.5",
+   "refuted_if": "Ge content not ranked first",
+   "settled_by": [
+    "R_P3"
+   ],
+   "numbers": {
+    "importance": {
+     "x_Ge": 0.14763080691866914,
+     "y_C": 0.0023683003137660924,
+     "carbon_form": 0.0009168436693106598,
+     "dopant": 0.0017676966329470177,
+     "T_K": 0.011511140880488298
+    }
+   }
+  },
+  {
+   "id": "C16_P3_Q4",
+   "ledger_seqs": [
+    64,
+    72,
+    73
+   ],
+   "papers": [
+    "P3"
+   ],
+   "statement": "Q4 holds nominally: dispersed carbon gives lower kappa than clustered (ratio 0.99)",
+   "predicted_class": "decision may flip",
+   "reason_from_record": "ratio 0.992, 0.008 below the threshold of 1, against matched-pair scatter 0.90-1.19",
+   "predicted_outcome": "ratio within 0.95-1.05, verdict a coin toss",
+   "refuted_if": "ratio outside 0.95-1.05 (carbon form would become a resolved factor in a 1152-atom box)",
+   "settled_by": [
+    "R_P3"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C17_P3_Q5",
+   "ledger_seqs": [
+    64,
+    72,
+    73
+   ],
+   "papers": [
+    "P3"
+   ],
+   "statement": "Q5 holds: carbon-free minimum of kappa over x at 300 K lies at x = 0.5",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "set by alloy mass disorder, the same physics that kept the party-4b composition ratio method-robust",
+   "predicted_outcome": "argmin in [0.3, 0.7]",
+   "refuted_if": "argmin outside [0.3, 0.7]",
+   "settled_by": [
+    "R_P3"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C18_P3_cost_inputs",
+   "ledger_seqs": [],
+   "papers": [
+    "P3"
+   ],
+   "statement": "cost inputs: MACE-MD 4.1 h per point (party 4b) and the covering cost weight 246; 'without the MACE runs the plan drops to 21.8 h'",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "cost of a newer checkpoint differs (model size, precision); these are hand-copied constants with no ledger entry",
+   "predicted_outcome": "cost per point changes; no batch design decision changes",
+   "refuted_if": "a P3 batch choice changes when the measured cost of the new model is substituted",
+   "settled_by": [
+    "R_P4B"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C19_P2_P08_fault",
+   "ledger_seqs": [
+    4,
+    5,
+    14,
+    81,
+    84
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "planted fault P08 (MACE rows under the Tersoff label) magnitude 0.50-0.60 x and detector-v2 lattice ratio",
+   "predicted_class": "magnitude only",
+   "reason_from_record": "the fault study draws P08 from fixed constants copied from party 4b and a MACE lattice calculation; no registered prediction Pr1-Pr7 of detector v2 reads P08; detection rates (v1 0.68, v2 1.00) would be re-reported, not re-decided",
+   "predicted_outcome": "detector-v2 adoption (ledger 84) unchanged",
+   "refuted_if": "a recalibrated P08 changes any of Pr1-Pr7",
+   "settled_by": [
+    "R_P4B",
+    "R_M1C"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C20_theorist_O3",
+   "ledger_seqs": [
+    122,
+    123,
+    124
+   ],
+   "papers": [
+    "P4",
+    "P5"
+   ],
+   "statement": "open question O3 of the AI-theorist pilot asks exactly this event (theorist A: sign holds, shift > 0.3 eV, 1.3 eV; theorist B: sign holds, within 0.3 eV, 0.4 eV)",
+   "predicted_class": "unaffected",
+   "reason_from_record": "the theorist answers are predictions about this recompute, not results that rest on it; the recompute grades them",
+   "predicted_outcome": "category 'sign holds, magnitude within 0.3 eV' (theorist B's category)",
+   "refuted_if": "sign flips, or the magnitude changes by more than 0.3 eV",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C21_light_dopants",
+   "ledger_seqs": [
+    74,
+    75,
+    76
+   ],
+   "papers": [
+    "P1",
+    "P3"
+   ],
+   "statement": "B, P inert; H, D, He minor; cavities a lever; no dopant moves the screening pick",
+   "predicted_class": "unaffected",
+   "reason_from_record": "B/P mass and strain terms come from almaBTE modes; the MACE summary enters only through the substitutional-carbon strain term, which no dopant row reads",
+   "predicted_outcome": "unchanged",
+   "refuted_if": "any class changes",
+   "settled_by": [
+    "R_M1C"
+   ],
+   "numbers": {}
+  },
+  {
+   "id": "C22_P4_T1_live",
+   "ledger_seqs": [
+    126,
+    127
+   ],
+   "papers": [
+    "P4",
+    "P5"
+   ],
+   "statement": "P4 stage T1 MACE-MD of Ge0.88Sn0.12 with vacancies (running; only benchmarks committed)",
+   "predicted_class": "unaffected",
+   "reason_from_record": "no result or decision exists yet; the potential version is a design parameter of this run. The benchmarks already show the PBE-family lattice offset: a0 = 5.917, 5.920 A against Vegard 5.75772 A",
+   "predicted_outcome": "every T1 result will need the version label; O1/O2 grades will be version-specific",
+   "refuted_if": "not applicable until T1 results are ledgered",
+   "settled_by": [],
+   "numbers": {}
+  },
+  {
+   "id": "C23_fault_study_chain",
+   "ledger_seqs": [
+    5,
+    6,
+    14,
+    24,
+    83
+   ],
+   "papers": [
+    "P2"
+   ],
+   "statement": "detector code changes and campaign operations reached only through the fault-study code that holds the P08 constants",
+   "predicted_class": "unaffected",
+   "reason_from_record": "the P08 constants act on synthetic trials only; the campaign-row operations (e.g. scope limit near melting, ledger 24) and the detector crash fixes read no MACE value",
+   "predicted_outcome": "unchanged",
+   "refuted_if": "any campaign-row operation changes after P08 is recalibrated",
+   "settled_by": [],
+   "numbers": {}
+  },
+  {
+   "id": "C24_records_without_mace_quantity",
+   "ledger_seqs": [
+    60,
+    71
+   ],
+   "papers": [
+    "P1",
+    "P2"
+   ],
+   "statement": "small-SiC MD gate G1 (Tersoff geometry) and the ledger rehash record",
+   "predicted_class": "unaffected",
+   "reason_from_record": "the gate reads Tersoff particle geometry; the rehash is bookkeeping",
+   "predicted_outcome": "unchanged",
+   "refuted_if": "either entry changes",
+   "settled_by": [],
+   "numbers": {}
+  }
+ ],
+ "decision_may_flip": [
+  "C1_lattice_gate",
+  "C3_carbon_trend_with_Ge",
+  "C4_carbon_prefers_Si_rich_shells",
+  "C8_zone_PrZ1",
+  "C12_h2h_mfgp_pick",
+  "C13_P3_Q1",
+  "C14_P3_Q2",
+  "C15_P3_Q3",
+  "C16_P3_Q4"
+ ],
+ "minimal_recompute_set": {
+  "units": [
+   "R_M1C",
+   "R_P3",
+   "R_P4B",
+   "R_Z1"
+  ],
+  "detail": {
+   "R_M1C": {
+    "what": "rerun the 51 M1c relaxations (Si, Ge, 3C-SiC bulk; x = 0, 0.2, 0.5 hosts with 0-4 C; min/max-Ge shells) with the new model, float64, same gates; then analyze_sigec and apply_m1c_decision (seconds)",
+    "recorded_cost_h": 1.75,
+    "unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)"
+   },
+   "R_P3": {
+    "what": "rerun all 89 P3 MACE-MD runs (Q3 needs all 71 planner points, Q1/Q2 the 16 hidden, the 2 repeats give the noise floor); then analyze_p3_mace (seconds)",
+    "recorded_cost_h": 150.08,
+    "unit": "GPU-h (CHPC guest GPUs, mixed)"
+   },
+   "R_P4B": {
+    "what": "rerun the 2 party-4b MACE-MD points (x = 0.15, 0.5; 300 K; 4x4x24 box); then head_to_head.py MF-GP rows and replay (seconds)",
+    "recorded_cost_h": 8.07,
+    "unit": "GPU-h (DGX GB10)"
+   },
+   "R_Z1": {
+    "what": "rerun the 19 Z1 relaxations (Ge at 6.5-15.5 A from a SiC sphere in a 1728-atom Si cell); then analyze_zone (seconds)",
+    "recorded_cost_h": 2.93,
+    "unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)"
+   }
+  },
+  "recorded_cost": {
+   "cpu_task_h": 4.68,
+   "gpu_h": 158.15
+  },
+  "cost_note": "costs are the recorded wall times of the old checkpoints; P3 and party 4b used the small float32 model, so a medium-size newer model will cost more per step; measure with one timing run before submitting",
+  "staging": {
+   "stage_1_cpu": [
+    "R_M1C",
+    "R_Z1"
+   ],
+   "stage_2_gpu_small": [
+    "R_P4B"
+   ],
+   "stage_3_gpu_large": [
+    "R_P3"
+   ],
+   "p3_screen_option": {
+    "what": "before R_P3, run the 2 repeat-seed pairs plus 2 matched carbon-form pairs (6 runs) to measure the new seed noise and carbon contrast; if both stay below noise, Q3/Q4 are predicted to remain uninformative",
+    "recorded_cost_h": 10.2,
+    "unit": "GPU-h at the recorded median"
+   }
+  }
+ },
+ "all_units": {
+  "R_M1C": {
+   "what": "rerun the 51 M1c relaxations (Si, Ge, 3C-SiC bulk; x = 0, 0.2, 0.5 hosts with 0-4 C; min/max-Ge shells) with the new model, float64, same gates; then analyze_sigec and apply_m1c_decision (seconds)",
+   "recorded_cost_h": 1.75,
+   "unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)"
+  },
+  "R_Z1": {
+   "what": "rerun the 19 Z1 relaxations (Ge at 6.5-15.5 A from a SiC sphere in a 1728-atom Si cell); then analyze_zone (seconds)",
+   "recorded_cost_h": 2.93,
+   "unit": "CPU-task-h (CHPC notchpeak-guest, 16 cores)"
+  },
+  "R_P4B": {
+   "what": "rerun the 2 party-4b MACE-MD points (x = 0.15, 0.5; 300 K; 4x4x24 box); then head_to_head.py MF-GP rows and replay (seconds)",
+   "recorded_cost_h": 8.07,
+   "unit": "GPU-h (DGX GB10)"
+  },
+  "R_P3": {
+   "what": "rerun all 89 P3 MACE-MD runs (Q3 needs all 71 planner points, Q1/Q2 the 16 hidden, the 2 repeats give the noise floor); then analyze_p3_mace (seconds)",
+   "recorded_cost_h": 150.08,
+   "unit": "GPU-h (CHPC guest GPUs, mixed)"
+  }
+ }
+}

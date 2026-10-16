@@ -1,0 +1,22 @@
+{
+  "model": "mace-mp small",
+  "device": "cuda",
+  "parentage": "MACE-MP foundation model, trained on Materials Project PBE DFT data (hybrid parentage: this party is MD executed on distilled DFT)",
+  "Si": {
+    "a0_A": 5.4642,
+    "e_coh_eV": 4.3561,
+    "pbe_ref_e_coh": 4.55,
+    "expt_e_coh": 4.63
+  },
+  "Ge": {
+    "a0_A": 5.7357,
+    "e_coh_eV": 3.465,
+    "pbe_ref_e_coh": 3.71,
+    "expt_e_coh": 3.85
+  },
+  "Si0.5Ge0.5": {
+    "a0_A": 5.5941,
+    "vegard_A": 5.6,
+    "dev_pct": -0.105
+  }
+}

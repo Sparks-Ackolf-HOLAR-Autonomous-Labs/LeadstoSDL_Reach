@@ -1,0 +1,117 @@
+{
+ "starry_curves_in_slice": 529,
+ "excluded_curves_by_reason": {
+  "composite_or_unparsable": 119,
+  "non_dopant_element": 254,
+  "not_binary_sige": 5,
+  "dopant_ge_2at%": 15,
+  "replotted_reference_curve": 13,
+  "ambiguous_no_stoichiometry": 12,
+  "electronic_kappa_curve": 1
+ },
+ "points_total": 657,
+ "points_live": 645,
+ "live_by_party": {
+  "DB-STARRY": 645,
+  "DB-UCSB": 0
+ },
+ "live_by_system": {
+  "bulk": 32,
+  "film": 2,
+  "nanostructured": 354,
+  "nanowire": 15,
+  "other": 242
+ },
+ "live_by_kappa_type": {
+  "total": 592,
+  "lattice": 53
+ },
+ "live_upstream_papers": 37,
+ "x_ge_values": [
+  0.004,
+  0.03,
+  0.04,
+  0.05,
+  0.0625,
+  0.0816,
+  0.0872,
+  0.0875,
+  0.09,
+  0.1,
+  0.1125,
+  0.1375,
+  0.1625,
+  0.1919,
+  0.2,
+  0.2005,
+  0.2015,
+  0.27,
+  0.3,
+  0.3485,
+  0.365,
+  0.4
+ ],
+ "dedup_flagged": 12,
+ "citrine_rows_doi_resolved_via_ucsb": [
+  {
+   "citrine_row": "row112_Si0.8Ge0.2",
+   "doi": "10.1021/nl8026795",
+   "ucsb_row": "row97_Si0.8Ge0.2_T400.0"
+  },
+  {
+   "citrine_row": "row115_Si0.7956Ge0.1989P0.0055",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row101_Si0.7956Ge0.1989P0.0055_T700.0"
+  },
+  {
+   "citrine_row": "row227_Si0.8Ge0.2",
+   "doi": "10.1021/nl8026795",
+   "ucsb_row": "row283_Si0.8Ge0.2_T1000.0"
+  },
+  {
+   "citrine_row": "row383_Si0.79936Ge0.19984B0.0008",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row519_Si0.79936Ge0.19984B0.0008_T400.0"
+  },
+  {
+   "citrine_row": "row408_Si0.8Ge0.2",
+   "doi": "10.1021/nl8026795",
+   "ucsb_row": "row560_Si0.8Ge0.2_T700.0"
+  },
+  {
+   "citrine_row": "row473_Si0.7956Ge0.1989P0.0055",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row661_Si0.7956Ge0.1989P0.0055_T1000.0"
+  },
+  {
+   "citrine_row": "row537_Si0.7956Ge0.1989P0.0055",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row760_Si0.7956Ge0.1989P0.0055_T400.0"
+  },
+  {
+   "citrine_row": "row564_Si0.79936Ge0.19984B0.0008",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row804_Si0.79936Ge0.19984B0.0008_T700.0"
+  },
+  {
+   "citrine_row": "row687_Si0.79936Ge0.19984B0.0008",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row997_Si0.79936Ge0.19984B0.0008_T1000.0"
+  },
+  {
+   "citrine_row": "row714_Si0.8Ge0.2",
+   "doi": "10.1021/nl8026795",
+   "ucsb_row": "row1035_Si0.8Ge0.2_T300.0"
+  },
+  {
+   "citrine_row": "row727_Si0.7956Ge0.1989P0.0055",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row1055_Si0.7956Ge0.1989P0.0055_T300.0"
+  },
+  {
+   "citrine_row": "row744_Si0.79936Ge0.19984B0.0008",
+   "doi": "10.1063/1.348408",
+   "ucsb_row": "row1091_Si0.79936Ge0.19984B0.0008_T300.0"
+  }
+ ]
+}

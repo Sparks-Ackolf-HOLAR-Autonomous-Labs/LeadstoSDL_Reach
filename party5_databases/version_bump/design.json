@@ -1,0 +1,25 @@
+{
+ "campaign": "db-version-bump-starrydata-2026-10-04",
+ "question": "When the open database behind the experimental evidence party publishes a new release, what does the campaign have to revise, and can the reach of that revision be stated before the new data are read?",
+ "pinned_release": "starrydata/starrydata_datasets tag data-20260928 (sha256 pins in party5_databases/open_db/ingest_open_db.py)",
+ "new_release": "starrydata/starrydata_datasets tag data-20261003 (newest dated tag on 2026-10-04)",
+ "procedure": [
+  "S1 fetch: download all_curves, all_samples, all_papers of the new tag; record their sha256 (a mismatch with the pins is expected: the release is regenerated daily) and extract the SiGe thermal-conductivity slice with the unchanged filter of ingest_open_db.fetch_starry; commit the slice files and full-release hashes to the ledger before any comparison",
+  "S2 diff: compare old and new slices curve by curve, keyed by (sample_id, figure_id, prop_y); classes unchanged / added / removed / changed (any change in x or y arrays, composition, or sample metadata used by the entry rules)",
+  "S3 propagate: re-run the unchanged ingest (entry rules, dedup) and bound screen on the new slice in a parallel folder; list the live points, upstream papers and (x, T, sample-class) hyperedges that change, and every downstream summary number (SCREEN_SUMMARY.json) that moves"
+ ],
+ "decision_rule": {
+  "no_change": "the in-scope slice is identical: record an upstream revision event with an empty blast radius; the pin moves to the new tag (strengthen of the pinned evidence)",
+  "changed_values": "changed in-scope curves: correct the affected points to the new release values (cause: upstream revision), ledger lists them",
+  "removed": "curves removed upstream: quarantine (reversible) the affected points; do not delete",
+  "added": "new in-scope curves: enter as new evidence only after the cross-party bound screen; flagged ones are quarantined",
+  "reach": "the revision is accepted only if every summary number that moves rests on a hyperedge that contains a changed, removed or added curve; any other movement is a pipeline fault and is reported as a gate failure"
+ },
+ "predictions": {
+  "PrV1": "all three release files have new sha256 values (daily regeneration)",
+  "PrV2": "the in-scope SiGe slice changes by at most 5% of its curves",
+  "PrV3": "the x = 0.2 medians in SCREEN_SUMMARY.json move by less than 5%",
+  "PrV4": "the reach check passes: nothing moves outside the hyperedges touched by changed curves"
+ },
+ "paper": "P2 (database releases as upstream revision events, executed)"
+}

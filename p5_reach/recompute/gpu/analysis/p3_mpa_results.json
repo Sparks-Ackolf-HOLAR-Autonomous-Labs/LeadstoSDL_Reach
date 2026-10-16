@@ -1,0 +1,125 @@
+{
+ "design_sha256": "50976ca674623db871834bbe536ab9daff4a6f7a34be98876b8441bcb99ea40f",
+ "n_measured": 89,
+ "lost": [],
+ "n_hidden_ok": 16,
+ "noise_floor_abs_log_diff": [
+  0.12747989779317004,
+  0.0863585139090909
+ ],
+ "scores": {
+  "CA1": {
+   "n_used": 15,
+   "log_rmse": 0.16376773637166664,
+   "spearman": 0.7705882352941176,
+   "pick_regret": 0.12418423020236857,
+   "pair_coverage_after_losses": 1.0
+  },
+  "CA2": {
+   "n_used": 30,
+   "log_rmse": 0.17401963297412892,
+   "spearman": 0.7911764705882354,
+   "pick_regret": 0.0,
+   "pair_coverage_after_losses": 1.0
+  },
+  "OFAT": {
+   "n_used": 12,
+   "log_rmse": 0.16097379440029363,
+   "spearman": 0.7546127875344238,
+   "pick_regret": 0.31489514546899144,
+   "pair_coverage_after_losses": 0.5408163265306123
+  },
+  "RND_pool": {
+   "n_used": 30,
+   "log_rmse": 0.12085672131153476,
+   "spearman": 0.8352941176470589,
+   "pick_regret": 0.0,
+   "pair_coverage_after_losses": 0.9285714285714286
+  },
+  "RND15": {
+   "log_rmse": 0.1318747599811832,
+   "spearman": 0.7970588235294117,
+   "pick_regret": 0.0,
+   "log_rmse_q25_q75": [
+    0.12069968979641871,
+    0.14711744980657643
+   ]
+  },
+  "RND12": {
+   "log_rmse": 0.1396856821396127,
+   "spearman": 0.7705882352941176,
+   "pick_regret": 0.0,
+   "log_rmse_q25_q75": [
+    0.12568864973622154,
+    0.15450281459777682
+   ]
+  },
+  "RND_pool_bootstrap_log_rmse_median": 0.12645093648818279
+ },
+ "materials": {
+  "importance": {
+   "x_Ge": 0.13731202709015022,
+   "y_C": 0.0068012613199376105,
+   "carbon_form": 0.0012721054085956204,
+   "dopant": 0.0029180125719539362,
+   "T_K": 0.010922181864487335
+  },
+  "ranking": [
+   "x_Ge",
+   "T_K",
+   "y_C",
+   "dopant",
+   "carbon_form"
+  ],
+  "dispersed_over_clustered_matched_pairs": [
+   0.9477395016030644,
+   0.7729699756306783,
+   1.0266768952304177,
+   1.1257053404480577,
+   0.9952492767809322,
+   0.8660785457586739,
+   1.1561778062511028,
+   0.9354111175533096,
+   1.0130958432659982,
+   1.0739983133123119,
+   0.9650890269567288,
+   1.08860610087501,
+   1.1520993083706264,
+   0.8857621674109667,
+   0.8245223918204976
+  ],
+  "dispersed_over_clustered_surrogate": 0.9890423464803395,
+  "argmin_x_yC0_300K": 0.5
+ },
+ "predictions": {
+  "Q1": {
+   "CA1": 0.16376773637166664,
+   "RND15_median": 0.1318747599811832,
+   "pass": false
+  },
+  "Q2": {
+   "OFAT": 0.16097379440029363,
+   "RND12_median": 0.1396856821396127,
+   "pass": true
+  },
+  "Q3": {
+   "ranking": [
+    "x_Ge",
+    "T_K",
+    "y_C",
+    "dopant",
+    "carbon_form"
+   ],
+   "pass": false
+  },
+  "Q4": {
+   "dispersed_over_clustered": 0.9886121074178917,
+   "basis": "matched pairs",
+   "pass": true
+  },
+  "Q5": {
+   "argmin_x": 0.5,
+   "pass": true
+  }
+ }
+}

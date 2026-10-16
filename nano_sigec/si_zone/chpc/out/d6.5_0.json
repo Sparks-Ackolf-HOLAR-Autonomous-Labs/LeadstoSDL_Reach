@@ -1,0 +1,15 @@
+{
+ "task": "d6.5_0",
+ "site_index": 996,
+ "d_A": 6.446051106429576,
+ "model": "MACE-MP-0 medium float64",
+ "E_eV": -9319.32700780248,
+ "V_A3": 34324.80721641916,
+ "fmax_norm": 0.004841613062091238,
+ "pressure_GPa": 0.007619607101979691,
+ "optimizer_converged": true,
+ "steps": 29,
+ "restarts": 0,
+ "gate_pass": true,
+ "wall_s": 493.9817626476288
+}

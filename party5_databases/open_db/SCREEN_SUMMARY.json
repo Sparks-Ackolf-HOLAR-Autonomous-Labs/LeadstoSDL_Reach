@@ -1,0 +1,52 @@
+{
+ "bound_flagged_live": 0,
+ "flagged": [],
+ "x02_300K_median_by_system": {
+  "nanostructured": [
+   10,
+   3.52
+  ],
+  "bulk": [
+   0,
+   null
+  ],
+  "other": [
+   6,
+   3.14
+  ],
+  "nanowire": [
+   0,
+   null
+  ],
+  "film": [
+   0,
+   null
+  ]
+ },
+ "x02_900K_median_by_system": {
+  "nanostructured": [
+   31,
+   2.91
+  ],
+  "bulk": [
+   4,
+   5.13
+  ],
+  "other": [
+   19,
+   2.99
+  ],
+  "nanowire": [
+   0,
+   null
+  ],
+  "film": [
+   0,
+   null
+  ]
+ },
+ "bte_x02": {
+  "300.0": 7.27,
+  "900.0": 5.47
+ }
+}

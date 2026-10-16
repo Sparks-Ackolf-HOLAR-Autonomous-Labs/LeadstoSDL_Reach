@@ -1,0 +1,426 @@
+[
+  {
+    "x_ge": 0.2,
+    "T_K": 400.0,
+    "kappa_W_mK": 2.51953,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row112_Si0.8Ge0.2",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 112,
+      "formula": "Si0.8Ge0.2",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 700.0,
+    "kappa_W_mK": 3.7233699999999996,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row115_Si0.7956Ge0.1989P0.0055",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 115,
+      "formula": "Si0.7956Ge0.1989P0.0055",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "P"
+    ],
+    "dopant_frac": 0.0055,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 1000.0,
+    "kappa_W_mK": 2.5546900000000003,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row227_Si0.8Ge0.2",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 227,
+      "formula": "Si0.8Ge0.2",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 400.0,
+    "kappa_W_mK": 4.14497,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row383_Si0.79936Ge0.19984B0.0008",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 383,
+      "formula": "Si0.79936Ge0.19984B0.0008",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "B"
+    ],
+    "dopant_frac": 0.0008,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 700.0,
+    "kappa_W_mK": 2.56641,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row408_Si0.8Ge0.2",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 408,
+      "formula": "Si0.8Ge0.2",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 1000.0,
+    "kappa_W_mK": 3.6656800000000005,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row473_Si0.7956Ge0.1989P0.0055",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 473,
+      "formula": "Si0.7956Ge0.1989P0.0055",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "P"
+    ],
+    "dopant_frac": 0.0055,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 400.0,
+    "kappa_W_mK": 4.22929,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row537_Si0.7956Ge0.1989P0.0055",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 537,
+      "formula": "Si0.7956Ge0.1989P0.0055",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "P"
+    ],
+    "dopant_frac": 0.0055,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 700.0,
+    "kappa_W_mK": 3.8165699999999996,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row564_Si0.79936Ge0.19984B0.0008",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 564,
+      "formula": "Si0.79936Ge0.19984B0.0008",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "B"
+    ],
+    "dopant_frac": 0.0008,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 1000.0,
+    "kappa_W_mK": 3.59911,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row687_Si0.79936Ge0.19984B0.0008",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 687,
+      "formula": "Si0.79936Ge0.19984B0.0008",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "B"
+    ],
+    "dopant_frac": 0.0008,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 300.0,
+    "kappa_W_mK": 2.44922,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row714_Si0.8Ge0.2",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 714,
+      "formula": "Si0.8Ge0.2",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 300.0,
+    "kappa_W_mK": 4.139469999999999,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row727_Si0.7956Ge0.1989P0.0055",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 727,
+      "formula": "Si0.7956Ge0.1989P0.0055",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "P"
+    ],
+    "dopant_frac": 0.0055,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.2,
+    "T_K": 300.0,
+    "kappa_W_mK": 4.33976,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row744_Si0.79936Ge0.19984B0.0008",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 744,
+      "formula": "Si0.79936Ge0.19984B0.0008",
+      "per_row_doi": null
+    },
+    "dopants": [
+      "B"
+    ],
+    "dopant_frac": 0.0008,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.5,
+    "T_K": 300.0,
+    "kappa_W_mK": 7.1,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row748_SiGe",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 748,
+      "formula": "SiGe",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": true,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.0,
+    "T_K": 298.0,
+    "kappa_W_mK": 150.0,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row791_Si",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 791,
+      "formula": "Si",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": true
+  },
+  {
+    "x_ge": 0.0,
+    "T_K": 373.0,
+    "kappa_W_mK": 110.0,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row817_Si",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 817,
+      "formula": "Si",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.0,
+    "T_K": 773.0,
+    "kappa_W_mK": 45.0,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row840_Si",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 840,
+      "formula": "Si",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  },
+  {
+    "x_ge": 0.0,
+    "T_K": 1273.0,
+    "kappa_W_mK": 26.0,
+    "system": "bulk",
+    "method": "experiment",
+    "corpusId": "DB-CITRINE",
+    "title": "Derived party: Citrine experimental thermal conductivity (matminer citrine_thermal_conductivity, figshare 13314470, 2018-10 release)",
+    "snippet_hash": "row857_Si",
+    "query_file": "party5",
+    "party_type": "derived/aggregated",
+    "upstream": {
+      "dataset": "citrine_thermal_conductivity",
+      "figshare_file": 13314470,
+      "sha256": "8490997195d6ec912705a5b2322726e53a72c26143a7e63fe0f962ccc6232b2c",
+      "row_index": 857,
+      "formula": "Si",
+      "per_row_doi": null
+    },
+    "dopants": [],
+    "dopant_frac": 0.0,
+    "T_assumed_room": false,
+    "dedup_suspect": false
+  }
+]

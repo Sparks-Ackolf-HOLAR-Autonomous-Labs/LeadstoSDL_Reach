@@ -1,0 +1,20 @@
+{
+ "task": "0_2_nC2",
+ "model": "MACE-MPA-0 medium float64",
+ "x": 0.0,
+ "seed": 2,
+ "n_sites": 216,
+ "n_C": 2,
+ "E_eV": -1173.9524534438015,
+ "V_A3": 4370.430272825849,
+ "a_A": 5.4498783788187986,
+ "n_atoms": 216,
+ "fmax_norm": 0.004464794626041635,
+ "fmax_component": 0.003991167977131758,
+ "pressure_GPa": 0.0017869616997517183,
+ "optimizer_converged": true,
+ "steps": 67,
+ "restarts": 0,
+ "gate_pass": true,
+ "wall_s": 81.11008715629578
+}

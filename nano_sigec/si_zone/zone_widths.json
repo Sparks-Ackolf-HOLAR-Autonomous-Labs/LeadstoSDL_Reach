@@ -1,0 +1,49 @@
+{
+ "c": 8.083,
+ "phi_SiC_at_1at_C": 0.0101,
+ "x_C": 0.01,
+ "bound": "pure-Si zone: each w* is a lower bound on the width needed to cancel",
+ "rows": {
+  "density_edge": {
+   "source": "small_sic/decision_robustness.json, density-edge row (ledger 61)",
+   "widths": {
+    "R2.5nm_T300K": {
+     "r_particle": 0.1252105422499411,
+     "w_star_A": 22.005334391013726,
+     "w_star_nm": 2.2005334391013727
+    },
+    "R5nm_T300K": {
+     "r_particle": 0.14697838854566148,
+     "w_star_A": 48.23055539281761,
+     "w_star_nm": 4.823055539281761
+    },
+    "R2.5nm_T1100K": {
+     "r_particle": 0.10404266904922842,
+     "w_star_A": 19.721199723312758,
+     "w_star_nm": 1.9721199723312757
+    },
+    "R5nm_T1100K": {
+     "r_particle": 0.1256579107779564,
+     "w_star_A": 44.101876230585006,
+     "w_star_nm": 4.4101876230585
+    }
+   }
+  },
+  "measured": {
+   "source": "small_sic/r50/measured_curves.json (ledger 110), 300 K",
+   "widths": {
+    "R2.5nm_T300K": {
+     "r_particle": 0.06328722549179155,
+     "w_star_A": 14.39157471129656,
+     "w_star_nm": 1.439157471129656
+    },
+    "R5nm_T300K": {
+     "r_particle": 0.03741461937104773,
+     "w_star_A": 19.933224031731008,
+     "w_star_nm": 1.9933224031731007
+    }
+   }
+  }
+ },
+ "check": "density-edge 300 K widths reproduce zone_results.json Z3 w_star_A"
+}

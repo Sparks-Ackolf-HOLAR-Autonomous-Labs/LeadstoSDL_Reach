@@ -1,0 +1,16 @@
+{
+ "task": "bulk_SiC",
+ "model": "MACE-MPA-0 medium float64",
+ "E_eV": -60.20870064365261,
+ "V_A3": 84.4041951832232,
+ "a_A": 4.386532428885737,
+ "n_atoms": 8,
+ "fmax_norm": 2.388121918188961e-13,
+ "fmax_component": 1.6102960978536807e-13,
+ "pressure_GPa": 0.00010236334788556856,
+ "optimizer_converged": true,
+ "steps": 8,
+ "restarts": 0,
+ "gate_pass": true,
+ "wall_s": 2.718747854232788
+}

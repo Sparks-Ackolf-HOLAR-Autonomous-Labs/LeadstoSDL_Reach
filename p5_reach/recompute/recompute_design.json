@@ -1,0 +1,24 @@
+{
+ "campaign": "p5-mace-version-recompute-cpu-2026-10-09",
+ "parent": "p5-reach-prediction-mace-version (ledger 130)",
+ "paper": "P5",
+ "operator_go": "issue 55, 2026-10-09 UTC: 'Start the P5 recompute'",
+ "question": "Which of the claims predicted at ledger 130 change when every CPU MACE calculation (M1c where-carbon-goes relaxations, Z1 Ge-segregation profile) is repeated with a newer foundation potential, and does the predicted reach match the observed reach?",
+ "old_model": "MACE-MP-0 medium, float64, CPU (ledger 47/54 M1c, 69 Z1)",
+ "new_model": "MACE-MPA-0 medium (mace_mp model='medium-mpa-0', trained on MPtrj plus sAlex), float64, CPU, mace 0.3.16 (CHPC module mace/0.3.16_cu126); checkpoint file macempa0mediummodel sha256 75428afe3a1d7d8062e19bcaabd5c433623cabf308242ec9fb493e38604fb638, cached in the CHPC home before submission",
+ "model_choice": "MPA-0 rather than OMAT-0: same PBE/PBE+U functional family as MP-0 (so the change is training-data scope, the P5 event as defined at ledger 130) and an MIT licence; OMAT-0 is trained on a different DFT dataset and carries an academic-only licence",
+ "units": {
+  "R_M1C": "m1c/mace_relax_m1c.py, 51 tasks, identical structures, seeds, optimiser, gates and checkpointing to nano_sigec/m1c (only the model string changes)",
+  "R_Z1": "z1/mace_zone.py, task 0 reference relaxation then tasks 1-18, identical to nano_sigec/si_zone stage Z1 (only the model string changes)"
+ },
+ "predictions": "the claim table of p5_reach/reach_prediction.json (sha256 9074e132956896b67de0a6f3bc82689157c2eb592d9e461f0c5aeed20d41c5c9), ledger 130, for every claim settled by R_M1C or R_Z1: C1, C2, C3, C4, C5, C6, C7, C8, C9, C19, C20, C21, and the theorist question O3",
+ "analysis": "after the raw outputs are hashed onto the ledger: rerun nano_sigec/m1c/summarize_m1c.py, nano_sigec/analyze_sigec.py and nano_sigec/si_zone/analyze_zone.py on the new outputs (paths swapped, code unchanged), then score each claim with the rule in PREDICTION.md section 6 (predicted, missed, over-predicted); an output that changes outside the 49 reached entries is a miss of the graph",
+ "decision_rule": {
+  "claim still holds under its registered rule": "ledger 'strengthen' with model-version provenance (claim now rests on two checkpoints)",
+  "claim flips under its registered rule": "ledger 'scope_limit' to 'MACE-MP-0 only' plus 'flag' on every dependent statement in the reach set; no paper statement changes until the operator decides",
+  "gate M1c-a (force/pressure) fails on any task": "ledger 'gate_failure' for that unit; its claims are scored 'not settled', not 'held'"
+ },
+ "deviation_policy": "infrastructure reruns (preemption, broken nodes) allowed with a ledger deviation entry; any change to structures, thresholds or model is a new registration",
+ "placement": "notchpeak-guest / owner-guest CPU only (grn061 off-limits; DGX reserved by operator)",
+ "not_in_this_registration": "R_P4B (8 GPU-h) and R_P3 (150 GPU-h): registered separately after one timing run"
+}

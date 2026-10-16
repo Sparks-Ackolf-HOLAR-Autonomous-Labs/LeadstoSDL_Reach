@@ -1,0 +1,917 @@
+{
+ "entry": "P08",
+ "recalibration": {
+  "kappa_ratio": [
+   0.7,
+   0.75
+  ],
+  "A_MACE": [
+   5.4674,
+   5.7192
+  ]
+ },
+ "summary": {
+  "detected_rate_adj": 1.0,
+  "A_adj": {
+   "hit": 14,
+   "partial": 36
+  },
+  "trials_with_collateral_adj": 0,
+  "ops_seen": {
+   "correct": 50,
+   "scope-limit": 44,
+   "split": 12,
+   "quarantine": 17
+  }
+ },
+ "trials": [
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit",
+    "scope-limit"
+   ],
+   "severity_u": 0.044934540436140535,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8000
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.3812361733539359,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8001
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.23892012419431552,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8002
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.5363154899767418,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8003
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.8378182482080321,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8004
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.23859517790229767,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8005
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.8888698535191706,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8006
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.811796871138844,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8007
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.27795641174747576,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8008
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.8601863890657566,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8009
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.4122714560377223,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8010
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.3248233381888549,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8011
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.9846594858605194,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8012
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.9736462138845774,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8013
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.3436587069737287,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8014
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.14501365790484477,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8015
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.1743886478191523,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8016
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.23592954300125368,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8017
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.056616253057706345,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8018
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.01226618937135937,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8019
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.393001945457629,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8020
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.4846681913589824,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8021
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.16970635665737477,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8022
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.10032211222144838,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8023
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.8363789317056085,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8024
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.5482996852454542,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8025
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.9219275445923655,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8026
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.9569023427938679,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8027
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.39393417042970547,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8028
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.09939264783589108,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8029
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.6807357946659575,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8030
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.5500176848350381,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8031
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.010860754071642775,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8032
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.8840159986072089,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8033
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.16478586955730878,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8034
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.1444910720209155,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8035
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.3868443050221476,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8036
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct"
+   ],
+   "outcome_A": "hit",
+   "outcome_B": "hit",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.09257783021709709,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8037
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.009872954689132074,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8038
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.003376897446221716,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8039
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.7238908173722397,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8040
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.6533215741227866,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8041
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "quarantine",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.6539366951163424,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8042
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit",
+    "split"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.47714482355255494,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8043
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.22718145584399874,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8044
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.12363918711404187,
+   "detected_adj": true,
+   "outcome_A_adj": "hit",
+   "outcome_B_adj": "hit",
+   "collateral_adj": [],
+   "trial_seed": 8045
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.10071681610586103,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8046
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [
+    "scope-limit"
+   ],
+   "severity_u": 0.16831178804734503,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8047
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.4932734326302123,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8048
+  },
+  {
+   "detected": true,
+   "ops_on_affected": [
+    "correct",
+    "scope-limit"
+   ],
+   "outcome_A": "partial",
+   "outcome_B": "partial",
+   "collateral": [],
+   "severity_u": 0.5336072850672846,
+   "detected_adj": true,
+   "outcome_A_adj": "partial",
+   "outcome_B_adj": "partial",
+   "collateral_adj": [],
+   "trial_seed": 8049
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+NVIDIA A40, 46068 MiB
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:Default dtype float32 does not match model dtype float64, converting models to float32.
+/uufs/chpc.utah.edu/common/home/u1496771/mat_theory/p5_gpu/p3/mace_rnemd.py:141: DeprecationWarning: Use thermalize_momenta
+  MaxwellBoltzmannDistribution(at, temperature_K=p["T_K"], rng=np.random.default_rng(p["seed"]))
+/uufs/chpc.utah.edu/sys/installdir/r8/mace/0.3.16_cu126/.venv/lib/python3.13/site-packages/ase/md/langevin.py:102: FutureWarning: The implementation of `fixcm=True` in `Langevin` does not strictly sample the correct NVT distributions. The deviations are typically small for large systems but can be more pronounced for small systems. Use `fixcm=False` together with `ase.constraints.FixCom`. `fixcm` is deprecated since ASE 3.28.0 and will be removed in a future release.
+  warnings.warn(msg, FutureWarning)
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using medium MPA-0 model as default MACE-MP model, to use previous (before 3.10) default model please specify 'medium' as model argument
+Using Materials Project MACE for MACECalculator with /uufs/chpc.utah.edu/common/home/u1496771/.cache/mace/macempa0mediummodel
+Using float32 for MACECalculator, which is faster but less accurate. Recommended for MD. Use float64 for geometry optimization.
+prod 5000/50000 2928s
+prod 10000/50000 3886s
+prod 15000/50000 4849s
+prod 20000/50000 5814s
+prod 25000/50000 6778s
+prod 30000/50000 7743s
+prod 35000/50000 8707s
+prod 40000/50000 9672s
+prod 45000/50000 10636s
+prod 50000/50000 11600s
+{"pid": "H_x0.1_C0.0_none_none_T1100", "kappa_W_mK": 0.9123275731466215, "profile_R2": [0.9987862746263376, 0.9952311207075983]}

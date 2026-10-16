@@ -1,0 +1,16 @@
+{
+ "x": 1.0,
+ "T": 1100.0,
+ "kappa_W_mK": 16.7188,
+ "kappa_RTA_W_mK": 15.284,
+ "method": "almaBTE-VCA",
+ "party": "BTE-DFT",
+ "grid": "24x24x24",
+ "solver": "full iterative BTE (RTA also recorded)",
+ "scope_notes": [
+  "VCA + mass-disorder: no short-range order, no anharmonic-disorder coupling",
+  "perturbative phonons stretched at 1100 K",
+  "first-principles parentage (DFT force constants, almaBTE database)"
+ ],
+ "tag": "bte_x1_T1100"
+}

@@ -1,0 +1,85 @@
+{
+ "campaign": "sigec-si-zone-2026-09-30",
+ "paper": "P1",
+ "parent_campaign": "sigec-small-sic-md-2026-09-30",
+ "question": "The small-SiC MD check (ledger seq 59-61) found that a Si-rich zone around each SiC particle raises kappa by 13% to 64%, more than the particle removes, but the zone width (7 A) was imposed by the Tersoff gate, not predicted. Does SiC push Ge away at sintering temperature, how wide is the resulting zone, and does it cancel the carbon benefit at the campaign's 1 at% C recipe?",
+ "operator_go": "issue 55, 2026-09-30: 'try to run Si-depleted zone suggested'",
+ "posthoc_basis_disclosed": {
+  "statement": "Before this design was written, the three shell-only pocket effects of the parent check were compared with a Maxwell-Garnett composite (conducting Si spheres in the alloy matrix, pocket volume fraction taken over the 7 fitted bins per half). One contrast parameter c = kappa_Si-pocket / kappa_matrix fits all three within 1%. This fit is post hoc; Z2 tests it on new geometry.",
+  "c_fit": 8.083,
+  "fit_rows": {
+   "R10A": [
+    1.136,
+    1.127
+   ],
+   "R15A": [
+    1.312,
+    1.306
+   ],
+   "R20A": [
+    1.632,
+    1.64
+   ]
+  },
+  "fit_rows_note": "[composite prediction, MD mean shell-only / host]"
+ },
+ "stages": {
+  "Z1": {
+   "what": "MACE-MP-0 medium (float64, CPU) Ge segregation energy profile around an embedded 3C-SiC sphere in Si",
+   "cell": "6 x 6 x 6 diamond Si cells (a = 5.431 A, 32.6 A side), 3C-SiC sphere of radius 5 A at the centre (a = 4.36 A; 47 atoms, 28 C), host atoms within 1.6 A of a particle atom deleted; 1728 atoms",
+   "tasks": "task 0 relaxes the reference (FIRE to 0.05 then LBFGS to 0.005 eV/A, hydrostatic cell); tasks 1-18 start from the relaxed reference and turn one host Si into Ge: two sites per distance bin d = 6.5..13.5 A (directions > 60 degrees apart) plus the two farthest host sites (15.5 A) as references. Sites fixed by chpc/mace_zone.py site_list()",
+   "readout": "Delta E(d) = E(Ge at d) - mean E(far sites). Equilibrium Ge occupancy relative to the far matrix, dilute (McLean) limit: c(d)/c_inf = exp(-Delta E(d)/k T_s) at T_s = 1373 K and 1473 K (typical SiGe sintering). Equivalent fully depleted width w_eq: the shell thickness whose volume equals the integral of (1 - c/c_inf) over the profile (linear interpolation between bins, value of the innermost bin used from the interface at 5 A to 6.5 A, zero beyond the last bin whose |Delta E| exceeds the noise floor)",
+   "noise_floor": "half the absolute difference between the two far-site energies, and the within-bin half range; bins whose mean |Delta E| is below the larger of these and 0.01 eV count as zero",
+   "placement": "notchpeak-guest / owner-guest, 16 CPUs per task, requeue, checkpoint every 25 steps"
+  },
+  "Z2": {
+   "what": "Tersoff rNEMD test of the composite rule at lower pocket fraction and a second pocket width",
+   "cell": "Si0.8Ge0.2, 16 x 16 x 48 diamond cells (about 8.8 x 8.8 x 26.3 nm, 98304 sites), two particles or pockets at z = Lz/4, 3Lz/4; md/in.sic_zone = parent input with pocket width w as a variable",
+   "runs": "md/points.txt: host, sh10w7 (R = 10 A, w = 7 A, no SiC), sh10w12 (w = 12 A, no SiC), p10w12 (R = 10 A SiC inside the w = 12 A pocket); 2 seeds each; T = 300 K",
+   "placement": "notchpeak-guest / owner-guest, 32 ranks, requeue"
+  },
+  "Z3": {
+   "what": "no compute: apply Z1 and Z2 to the campaign recipe",
+   "recipe": "Si0.8Ge0.2, 1 at% C as SiC, R = 2.5 nm and 5 nm, 300 K; particle reduction at the downweighted density edge (ledger seq 61): 12.5% (R = 2.5 nm) and 14.7% (R = 5 nm)",
+   "phi_SiC_at_1at_C": 0.0101,
+   "pocket_fraction": "f_p = phi_SiC * ((R + w_eq)^3 - R^3) / R^3",
+   "net": "kappa_net / kappa_0 = (1 - r_particle) * MG(f_p, c), with c from the parent fit if Z2 passes its gate, else the Z2-refitted c",
+   "bound_note": "treating the depleted zone as pure Si makes MG an upper bound on the zone's effect: dilute Ge in Si already lowers kappa strongly, so a partly depleted zone conducts less than pure Si"
+  }
+ },
+ "gates": {
+  "G1": "every Z1 relaxation ends with max force <= 0.01 eV/A and |p| <= 0.1 GPa",
+  "G2": "Z2: Ge-C geometric gap >= 5.7 A at start and end of the p10w12 runs (as in the parent check); every run finite kappa",
+  "G3": "Z2: the two host seeds agree within 8%"
+ },
+ "predictions": {
+  "PrZ1": "Delta E > 0 at the innermost bin (d = 6.5 A): SiC repels Ge, consistent with the converged MACE site preference (0.21 to 0.33 eV per Ge neighbour of a substitutional C)",
+  "PrZ2": {
+   "text": "composite rule predicts the Z2 shell-only ratios within max(0.05, the two-seed half range)",
+   "sh10w7": {
+    "f_fit": 0.029,
+    "kappa_over_host": 1.062
+   },
+   "sh10w12": {
+    "f_fit": 0.0628,
+    "kappa_over_host": 1.139
+   }
+  },
+  "PrZ3": {
+   "text": "p10w12 conducts better than the host (kappa ratio > 1), as in all six parent particle runs",
+   "p10w12": {
+    "r_vs_shell": 0.0356,
+    "kappa_over_host": 1.098
+   }
+  },
+  "PrZ4": "w_eq at 1473 K is below 7 A, i.e. narrower than the zone the parent check imposed"
+ },
+ "decision_rule": {
+  "compute": "cancel = (MG(f_p, c) - 1) / r_particle at R = 2.5 and 5 nm, with w_eq at T_s = 1473 K (1373 K reported alongside)",
+  "strengthen": "if cancel < 0.2 at both radii: the density-edge carbon claims (ledger seq 61) stand; the zone is recorded as a quantified minor term in the P1 model and limitations",
+  "correct": "if 0.2 <= cancel < 1 at either radius: correct the carbon claims: the reported kappa reduction becomes the net value and the equal-kappa Ge saving is recomputed with MG(f_p, c) applied to the carbon-bearing kappa_L",
+  "downweight": "if cancel >= 1 at either radius: the equilibrium zone erases the carbon benefit at that radius; the 'carbon replaces germanium' claim is scoped to routes that keep the zone below w* (the width at which cancel = 1, reported), and P1 states that the recipe depends on a non-equilibrium microstructure",
+  "z2_fallback": "if PrZ2 fails, c is refitted on all five shell-only geometries (parent three plus Z2 two) and the refit is used, disclosed as a deviation",
+  "z1_fallback": "if the reference relaxation fails G1, the Z1 energies are reported as unvalidated and Z3 runs on w = 7 A (the parent's imposed zone) as a stated upper case"
+ }
+}

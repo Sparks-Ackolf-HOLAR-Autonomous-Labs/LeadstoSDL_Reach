@@ -1,0 +1,502 @@
+{
+ "dois": [
+  "10.1002/adfm.200900250",
+  "10.1002/adma.200600527",
+  "10.1002/pssa.201228102",
+  "10.1016/j.ceramint.2016.02.001",
+  "10.1016/j.enconman.2015.01.082",
+  "10.1016/j.jallcom.2012.11.022",
+  "10.1016/j.jallcom.2018.09.029",
+  "10.1016/j.jcrysgro.2016.02.025",
+  "10.1016/j.jnucmat.2019.151856",
+  "10.1016/j.matchemphys.2013.09.019",
+  "10.1016/j.materresbull.2019.05.008",
+  "10.1016/j.msea.2012.11.073",
+  "10.1016/j.proeng.2011.12.442",
+  "10.1016/j.scriptamat.2014.08.026",
+  "10.1016/j.scriptamat.2014.10.001",
+  "10.1016/j.scriptamat.2017.12.019",
+  "10.1021/acsami.9b20090",
+  "10.1021/nl3003045",
+  "10.1021/nl8026795",
+  "10.1039/c5nr01786f",
+  "10.1063/1.1455693",
+  "10.1063/1.3027060",
+  "10.1063/1.328733",
+  "10.1063/1.3443707",
+  "10.1063/1.348408",
+  "10.1063/1.3647575",
+  "10.1063/1.4764919",
+  "10.1063/1.4768297",
+  "10.1063/1.4813474",
+  "10.1063/1.4917216",
+  "10.1063/1.4945328",
+  "10.1088/0022-3727/48/31/314010",
+  "10.1109/edm52169.2021.9507676",
+  "10.1109/green.2012.6200928",
+  "10.1134/s1063783415030208",
+  "10.1142/s1793604714500088",
+  "10.1146/annurev-matsci-062910-100445",
+  "10.1149/1.3553170"
+ ],
+ "asta": [
+  {
+   "paperId": "6dfa20460fb078bd75647fe4251ce1ac46b862a5",
+   "externalIds": {
+    "MAG": "2087572106",
+    "DOI": "10.1002/adfm.200900250",
+    "CorpusId": 96700319
+   },
+   "corpusId": 96700319,
+   "title": "Nanostructured Bulk Silicon as an Effective Thermoelectric Material",
+   "venue": "",
+   "year": 2009
+  },
+  {
+   "paperId": "f427e24bdb0683d69e988cad69270dee8d67c6b7",
+   "externalIds": {
+    "MAG": "2008375944",
+    "DOI": "10.1002/ADMA.200600527",
+    "CorpusId": 31648320
+   },
+   "corpusId": 31648320,
+   "title": "New Directions for Low\u2010Dimensional Thermoelectric Materials",
+   "venue": "",
+   "year": 2007
+  },
+  {
+   "paperId": "8d259f4d2de75273605fb1f66f527153f9188299",
+   "externalIds": {
+    "MAG": "2103150485",
+    "DOI": "10.1002/pssa.201228102",
+    "CorpusId": 122523670
+   },
+   "corpusId": 122523670,
+   "title": "The effect of synthesis parameters on transport properties of nanostructured bulk thermoelectric p\u2010type silicon germanium alloy",
+   "venue": "",
+   "year": 2012
+  },
+  {
+   "paperId": "2e978034e7a9a8dbe9f47e71e87398e5da5a3b27",
+   "externalIds": {
+    "MAG": "2271989043",
+    "DOI": "10.1016/J.CERAMINT.2016.02.001",
+    "CorpusId": 138604026
+   },
+   "corpusId": 138604026,
+   "title": "Fabrication and contact resistivity of W\u2013Si3N4/TiB2\u2013Si3N4/p\u2013SiGe thermoelectric joints",
+   "venue": "",
+   "year": 2016
+  },
+  {
+   "paperId": "6022df66b0620d060bf41cdb0d806466c24dd0e9",
+   "externalIds": {
+    "MAG": "2000674787",
+    "DOI": "10.1016/J.ENCONMAN.2015.01.082",
+    "CorpusId": 94853484
+   },
+   "corpusId": 94853484,
+   "title": "Thermoelectric performance of Si80Ge20\u2212xSbx based multiphase alloys with inhomogeneous dopant distribution",
+   "venue": "",
+   "year": 2015
+  },
+  {
+   "paperId": "620653d831f2b45aa46356a97db1793811f803fe",
+   "externalIds": {
+    "MAG": "2016987578",
+    "DOI": "10.1016/J.JALLCOM.2012.11.022",
+    "CorpusId": 137633938
+   },
+   "corpusId": 137633938,
+   "title": "Thermoelectric n-type silicon germanium synthesized by unidirectional solidification in microgravity",
+   "venue": "",
+   "year": 2013
+  },
+  {
+   "paperId": "821d8488cb5cb4c382fad950772166f8574e26c6",
+   "externalIds": {
+    "MAG": "2889996009",
+    "DOI": "10.1016/J.JALLCOM.2018.09.029",
+    "CorpusId": 139827301
+   },
+   "corpusId": 139827301,
+   "title": "Simultaneous enhancement in thermoelectric performance and mechanical stability of p-type SiGe alloy doped with Boron prepared by mechanical alloying and spark plasma sintering",
+   "venue": "Journal of Alloys and Compounds",
+   "year": 2019
+  },
+  {
+   "paperId": "428c2adb3934deec692efad126d8b63b3fabf4d5",
+   "externalIds": {
+    "MAG": "2292166851",
+    "DOI": "10.1016/J.JCRYSGRO.2016.02.025",
+    "CorpusId": 101083631
+   },
+   "corpusId": 101083631,
+   "title": "Vertical gradient solution growth of N-type Si0.73Ge0.27 bulk crystals with homogeneous composition and its thermoelectric properties",
+   "venue": "",
+   "year": 2016
+  },
+  {
+   "paperId": "57190c8e0825da948d68b81eb6555a9354804bd8",
+   "externalIds": {
+    "MAG": "2980604656",
+    "DOI": "10.1016/j.jnucmat.2019.151856",
+    "CorpusId": 208753274
+   },
+   "corpusId": 208753274,
+   "title": "Influence of fast neutron and gamma irradiation on the thermoelectric properties of n-type and p-type SiGe alloy",
+   "venue": "",
+   "year": 2020
+  },
+  {
+   "paperId": "c458a397c1d5d43a507ce4deaef40c7b3ae854f1",
+   "externalIds": {
+    "MAG": "2062010967",
+    "DOI": "10.1016/J.MATCHEMPHYS.2013.09.019",
+    "CorpusId": 135939092
+   },
+   "corpusId": 135939092,
+   "title": "Influences of milling media on the fabricating process and thermoelectric properties of silicon germanium alloys",
+   "venue": "",
+   "year": 2013
+  },
+  {
+   "paperId": "5609ea2e5bc0a164f886fafd7b3e797c46a49b5e",
+   "externalIds": {
+    "MAG": "2944402156",
+    "DOI": "10.1016/J.MATERRESBULL.2019.05.008",
+    "CorpusId": 165053058
+   },
+   "corpusId": 165053058,
+   "title": "Synergetic enhancement of thermoelectric and mechanical properties of n-type SiGe-P alloy through solid state synthesis and spark plasma sintering",
+   "venue": "Materials research bulletin",
+   "year": 2019
+  },
+  {
+   "paperId": "51ad695b986e8ce484d10c3e2d6149c0c9b55a9f",
+   "externalIds": {
+    "MAG": "2050927865",
+    "DOI": "10.1016/J.MSEA.2012.11.073",
+    "CorpusId": 135952428
+   },
+   "corpusId": 135952428,
+   "title": "Thermoelectric and mechanical properties of a hot pressed nanostructured n-type Si80Ge20 alloy",
+   "venue": "",
+   "year": 2013
+  },
+  {
+   "paperId": "e9a17ce534b5bb70c54c09d3700d0fd7b4fbf16d",
+   "externalIds": {
+    "MAG": "2031052830",
+    "DOI": "10.1016/J.PROENG.2011.12.442",
+    "CorpusId": 137663930
+   },
+   "corpusId": 137663930,
+   "title": "Thermoelectric properties of N-type Si80Ge20 doped with P",
+   "venue": "",
+   "year": 2012
+  },
+  {
+   "paperId": "9b32d9c6d9c0b2233b12202c8e2356cac542ecd8",
+   "externalIds": {
+    "MAG": "2005822525",
+    "DOI": "10.1016/J.SCRIPTAMAT.2014.08.026",
+    "CorpusId": 137006066
+   },
+   "corpusId": 137006066,
+   "title": "Thermoelectric properties of an N-type silicon\u2013germanium alloy related to the presence of silica nodules dispersed in the microstructure",
+   "venue": "",
+   "year": 2014
+  },
+  {
+   "paperId": "070148f8ae0da2e8c18bc0ad5a1dad9df535e4b1",
+   "externalIds": {
+    "MAG": "2018667832",
+    "DOI": "10.1016/J.SCRIPTAMAT.2014.10.001",
+    "CorpusId": 279535228
+   },
+   "corpusId": 279535228,
+   "title": "Optimization of ball-milling process for preparation of Si\u2013Ge nanostructured thermoelectric materials with a high figure of merit",
+   "venue": "",
+   "year": 2015
+  },
+  {
+   "paperId": "973d7bc2403201dc23aaefff6179464b95d732c4",
+   "externalIds": {
+    "MAG": "2775946109",
+    "DOI": "10.1016/J.SCRIPTAMAT.2017.12.019",
+    "CorpusId": 139627273
+   },
+   "corpusId": 139627273,
+   "title": "Thermoelectric properties and cost optimization of spark plasma sintered n-type Si0.9Ge0.1 - Mg2Si nanocomposites",
+   "venue": "",
+   "year": 2018
+  },
+  {
+   "paperId": "ea11484ef47072814e4cdee00d039a17a7eb3849",
+   "externalIds": {
+    "MAG": "2996343333",
+    "DOI": "10.1021/acsami.9b20090",
+    "CorpusId": 209434896,
+    "PubMed": "31860262"
+   },
+   "corpusId": 209434896,
+   "title": "Enhanced thermoelectric performance in n-type SrTiO3/SiGe composite.",
+   "venue": "ACS Applied Materials and Interfaces",
+   "year": 2019
+  },
+  {
+   "paperId": "1e64efec57644b67799d4a4d4834db0786fd0e3f",
+   "externalIds": {
+    "MAG": "2123988204",
+    "DOI": "10.1021/nl3003045",
+    "CorpusId": 15200195,
+    "PubMed": "22435933"
+   },
+   "corpusId": 15200195,
+   "title": "Enhancement of thermoelectric properties by modulation-doping in silicon germanium alloy nanocomposites.",
+   "venue": "Nano letters (Print)",
+   "year": 2012
+  },
+  {
+   "paperId": "039e4ebfb02c1184a15bf196c17b11fb34cee983",
+   "externalIds": {
+    "MAG": "2120631236",
+    "DOI": "10.1021/nl8026795",
+    "CorpusId": 34045459,
+    "PubMed": "19367858"
+   },
+   "corpusId": 34045459,
+   "title": "Enhanced thermoelectric figure-of-merit in nanostructured p-type silicon germanium bulk alloys.",
+   "venue": "Nano letters (Print)",
+   "year": 2008
+  },
+  {
+   "paperId": "99ef1d67aa7c5e9d383949048ff3c4e66b2176c8",
+   "externalIds": {
+    "MAG": "1834080624",
+    "DOI": "10.1039/c5nr01786f",
+    "CorpusId": 36640127,
+    "PubMed": "26138852"
+   },
+   "corpusId": 36640127,
+   "title": "The role of nanoscale defect features in enhancing the thermoelectric performance of p-type nanostructured SiGe alloys.",
+   "venue": "Nanoscale",
+   "year": 2015
+  },
+  {
+   "paperId": "359e50cb1e59780fea8d24a7959b03ebe73ffea3",
+   "externalIds": {
+    "MAG": "2151763628",
+    "DOI": "10.1063/1.1455693",
+    "CorpusId": 121935145
+   },
+   "corpusId": 121935145,
+   "title": "Thermal conductivity of Si/SiGe and SiGe/SiGe superlattices",
+   "venue": "",
+   "year": 2002
+  },
+  {
+   "paperId": "eee1a3b2ec6842c2af82f0fb304d4a457caef38c",
+   "externalIds": {
+    "MAG": "2082733596",
+    "DOI": "10.1063/1.3027060",
+    "CorpusId": 122397165
+   },
+   "corpusId": 122397165,
+   "title": "Enhanced thermoelectric figure of merit in nanostructured n-type silicon germanium bulk alloy",
+   "venue": "",
+   "year": 2008
+  },
+  {
+   "paperId": "401fb39ba6d08508264b2ca3e7dce6a8c4d235aa",
+   "externalIds": {
+    "MAG": "1988454408",
+    "DOI": "10.1063/1.328733",
+    "CorpusId": 120693413
+   },
+   "corpusId": 120693413,
+   "title": "The effect of phonon\u2010grain boundary scattering on the lattice thermal conductivity and thermoelectric conversion efficiency of heavily doped fine\u2010grained, hot\u2010pressed silicon germanium alloy",
+   "venue": "",
+   "year": 1981
+  },
+  {
+   "paperId": "46896d783f66e6c9ee0ef0827b13dd3bc5e45370",
+   "externalIds": {
+    "MAG": "1524006014",
+    "DOI": "10.1063/1.3443707",
+    "CorpusId": 118949943
+   },
+   "corpusId": 118949943,
+   "title": "Thermal conductivities of Si1-xGex nanowires with different germanium concentrations and diameters",
+   "venue": "",
+   "year": 2010
+  },
+  {
+   "paperId": "42d11dd62d46c6445334a3f3bc3721ac6e6b383a",
+   "externalIds": {
+    "MAG": "2072025892",
+    "DOI": "10.1063/1.348408",
+    "CorpusId": 123455027
+   },
+   "corpusId": 123455027,
+   "title": "Thermoelectric properties of pressure-sintered Si0.8Ge0.2 thermoelectric alloys",
+   "venue": "",
+   "year": 1991
+  },
+  {
+   "paperId": "921dcff827bc9089e9e7fc26960934c02842bd4d",
+   "externalIds": {
+    "MAG": "2067737589",
+    "DOI": "10.1063/1.3647575",
+    "CorpusId": 122489610
+   },
+   "corpusId": 122489610,
+   "title": "Enhanced thermoelectric figure of merit in SiGe alloy nanowires by boundary and hole-phonon scattering",
+   "venue": "",
+   "year": 2011
+  },
+  {
+   "paperId": "9cb8195bc1e2640b8d3ed8236c546d3c3913e41a",
+   "externalIds": {
+    "MAG": "1991210219",
+    "DOI": "10.1063/1.4764919",
+    "CorpusId": 119677030
+   },
+   "corpusId": 119677030,
+   "title": "Comparison of thermoelectric properties of p-type nanostructured bulk Si0.8Ge0.2 alloy with Si0.8Ge0.2 composites embedded with CrSi2 nano-inclusisons",
+   "venue": "",
+   "year": 2012
+  },
+  {
+   "paperId": "3005301ac55ee0d50564cce41af4eb35274b7c1e",
+   "externalIds": {
+    "MAG": "2055204941",
+    "DOI": "10.1063/1.4768297",
+    "CorpusId": 122319470
+   },
+   "corpusId": 122319470,
+   "title": "Enhanced thermoelectric figure-of-merit in spark plasma sintered nanostructured n-type SiGe alloys",
+   "venue": "",
+   "year": 2012
+  },
+  {
+   "paperId": "3bfc65bd858ef2bce23121fc3506c260deacf440",
+   "externalIds": {
+    "MAG": "2072224820",
+    "DOI": "10.1063/1.4813474",
+    "CorpusId": 97810411
+   },
+   "corpusId": 97810411,
+   "title": "The effect of phase heterogeneity on thermoelectric properties of nanostructured silicon germanium alloy",
+   "venue": "",
+   "year": 2013
+  },
+  {
+   "paperId": "4c6550ebd8fa04540050cc55e0224b82aa8c4aa7",
+   "externalIds": {
+    "MAG": "2039810236",
+    "DOI": "10.1063/1.4917216",
+    "CorpusId": 121466594
+   },
+   "corpusId": 121466594,
+   "title": "Impact of yttria stabilized zirconia nanoinclusions on the thermal conductivity of n-type Si80Ge20 alloys prepared by spark plasma sintering",
+   "venue": "",
+   "year": 2015
+  },
+  {
+   "paperId": "6f0fa58d4886e1a075c6abce064fad9177c53c1a",
+   "externalIds": {
+    "MAG": "2336880861",
+    "DOI": "10.1063/1.4945328",
+    "CorpusId": 123896873
+   },
+   "corpusId": 123896873,
+   "title": "Nanograin-enhanced in-plane thermoelectric figure of merit in n-type SiGe thin films",
+   "venue": "",
+   "year": 2016
+  },
+  {
+   "paperId": "7b500052ae7c1243c2fb08ace093b6e9cdfb1493",
+   "externalIds": {
+    "MAG": "1034117747",
+    "DOI": "10.1088/0022-3727/48/31/314010",
+    "CorpusId": 93381471
+   },
+   "corpusId": 93381471,
+   "title": "Microwave plasma synthesis of Si/Ge and Si/WSi2 nanoparticles for thermoelectric applications",
+   "venue": "",
+   "year": 2015
+  },
+  {
+   "paperId": "a5a721150830c93810e7e7b74bba1449e606905f",
+   "externalIds": {
+    "DOI": "10.1109/EDM52169.2021.9507676",
+    "CorpusId": 237209405
+   },
+   "corpusId": 237209405,
+   "title": "The Thermoelectric Properties of Nanostructured SiGe Phosphorus Doped by Spark Plasma Sintering",
+   "venue": "Educational Data Mining",
+   "year": 2021
+  },
+  {
+   "paperId": "35e18150d9d778af27412980c2fab5ffe7c4cd8f",
+   "externalIds": {
+    "MAG": "2003204785",
+    "DOI": "10.1109/GREEN.2012.6200928",
+    "CorpusId": 6748792
+   },
+   "corpusId": 6748792,
+   "title": "Enhancement in Thermoelectric Power Factor of SiGe-CrSi2 Composite Alloy",
+   "venue": "2012 IEEE Green Technologies Conference",
+   "year": 2012
+  },
+  {
+   "paperId": "e9badb81ef0e86ac0996f6893b4677d4efad15b6",
+   "externalIds": {
+    "DOI": "10.1134/S1063783415030208",
+    "CorpusId": 255237681
+   },
+   "corpusId": 255237681,
+   "title": "Transport properties of nanocomposite thermoelectric materials based on Si and Ge",
+   "venue": "Physics of the Solid State",
+   "year": 2015
+  },
+  {
+   "paperId": "7075d49e918c6ba89ff38f4509e111dd11013aff",
+   "externalIds": {
+    "MAG": "2151038231",
+    "DOI": "10.1142/S1793604714500088",
+    "CorpusId": 138989772
+   },
+   "corpusId": 138989772,
+   "title": "Microstructure and thermoelectric properties of Ga-DOPED SiGe alloys prepared by mechanical alloying and induction hot pressing",
+   "venue": "",
+   "year": 2014
+  },
+  {
+   "paperId": "08242cfd4fa3d3f6e232b8cc400ef64aab32e95b",
+   "externalIds": {
+    "MAG": "2166947364",
+    "DOI": "10.1146/ANNUREV-MATSCI-062910-100445",
+    "CorpusId": 138843261
+   },
+   "corpusId": 138843261,
+   "title": "Recent Developments in Semiconductor Thermoelectric Physics and Materials",
+   "venue": "",
+   "year": 2011
+  },
+  {
+   "paperId": "563ebf5f32e6b4f6fada3082d322edbd39df486d",
+   "externalIds": {
+    "MAG": "2160240970",
+    "DOI": "10.1149/1.3553170",
+    "CorpusId": 55843772
+   },
+   "corpusId": 55843772,
+   "title": "Production and Investigation of Porous Si-Ge Structures for Thermoelectric Application",
+   "venue": "ECS Transactions",
+   "year": 2011
+  }
+ ]
+}

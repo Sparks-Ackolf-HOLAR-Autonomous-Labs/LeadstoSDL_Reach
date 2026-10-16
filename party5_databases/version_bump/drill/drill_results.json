@@ -1,0 +1,126 @@
+{
+ "A_data_change": {
+  "plan": {
+   "changed": "21172",
+   "removed": "21933",
+   "added_from": "1344",
+   "added": [
+    "990001 (same values)",
+    "990002 (kappa x20)"
+   ]
+  },
+  "branch": "changed_values+removed+added",
+  "touched_samples_new_release": {
+   "21172": {
+    "points": 8,
+    "bound_flagged": 0,
+    "dedup_suspect": 0
+   },
+   "990001": {
+    "points": 9,
+    "bound_flagged": 0,
+    "dedup_suspect": 0
+   },
+   "990002": {
+    "points": 9,
+    "bound_flagged": 9,
+    "dedup_suspect": 0
+   }
+  },
+  "reach_check_pass": true,
+  "changed": {
+   "21172 | 17643 | Thermal conductivity": [
+    "y"
+   ]
+  },
+  "removed": [
+   "21933 | 18215 | Thermal conductivity"
+  ],
+  "added": [
+   "990001 | 781 | Thermal conductivity",
+   "990002 | 781 | Thermal conductivity"
+  ],
+  "live_points": [
+   645,
+   653
+  ],
+  "live_points_moved_added_removed": [
+   8,
+   9,
+   1
+  ],
+  "moves_outside_touched_samples": 0,
+  "summary_moved": [
+   "bound_flagged_live",
+   "flagged",
+   "x02_300K_median_by_system",
+   "x02_900K_median_by_system"
+  ],
+  "max_rel_move_x02_medians": 0.0103,
+  "scratch_ledger_ops": [
+   {
+    "seq": 100,
+    "kind": "shard_operation",
+    "op": "correct",
+    "target": "DB-STARRY sample 21172",
+    "cause": "upstream release revised the values"
+   },
+   {
+    "seq": 101,
+    "kind": "shard_operation",
+    "op": "quarantine",
+    "target": "DB-STARRY sample 21933",
+    "cause": "curve withdrawn upstream; reversible, not deleted"
+   },
+   {
+    "seq": 102,
+    "kind": "shard_operation",
+    "op": "retain",
+    "target": "DB-STARRY sample 990001 (new upstream curve)",
+    "cause": "passes the bound screen; enters as new evidence"
+   },
+   {
+    "seq": 103,
+    "kind": "shard_operation",
+    "op": "quarantine",
+    "target": "DB-STARRY sample 990002 (new upstream curve)",
+    "cause": "fails the cross-party bound screen"
+   }
+  ],
+  "scratch_chain_valid": true
+ },
+ "B_pipeline_fault": {
+  "plan": {},
+  "branch": "no_change",
+  "touched_samples_new_release": {},
+  "reach_check_pass": false,
+  "changed": {},
+  "removed": [],
+  "added": [],
+  "live_points": [
+   645,
+   443
+  ],
+  "live_points_moved_added_removed": [
+   0,
+   0,
+   202
+  ],
+  "moves_outside_touched_samples": 202,
+  "summary_moved": [
+   "x02_900K_median_by_system"
+  ],
+  "max_rel_move_x02_medians": 0.0,
+  "scratch_ledger_ops": [
+   {
+    "seq": 100,
+    "kind": "deviation",
+    "op": null,
+    "target": null,
+    "cause": "reach check failed: movement outside touched hyperedges"
+   }
+  ],
+  "scratch_chain_valid": true
+ },
+ "note": "scratch copy only; campaign ledger untouched"
+}

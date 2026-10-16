@@ -1,0 +1,28 @@
+{
+ "tag_old": "data-20260928",
+ "tag_new": "data-20261003",
+ "curves_old": 529,
+ "curves_new": 529,
+ "rows_old": 529,
+ "added": [],
+ "removed": [],
+ "changed": {},
+ "fraction_touched": 0.0,
+ "live_points_old": 645,
+ "live_points_new": 645,
+ "live_points_moved": 0,
+ "live_points_added": 0,
+ "live_points_removed": 0,
+ "touched_sample_ids": [],
+ "moves_outside_touched_samples": [],
+ "summary_moved": {},
+ "max_rel_move_x02_medians": 0.0,
+ "branch": "no_change",
+ "reach_check_pass": true,
+ "predictions": {
+  "PrV1": true,
+  "PrV2": true,
+  "PrV3": true,
+  "PrV4": true
+ }
+}

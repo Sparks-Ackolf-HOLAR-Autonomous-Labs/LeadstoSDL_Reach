@@ -1,0 +1,28 @@
+{
+ "byte_identical": {
+  "sigec_results_m1c": false,
+  "decision_robustness": true,
+  "r50_results": true,
+  "light_dopants_results": true
+ },
+ "sigec_results_keys_changed": [
+  "D1",
+  "D2_frontier",
+  "D3_lever_pct_at_yC_0.01",
+  "D5_M1",
+  "dE_prec_used_eV",
+  "delta_C_used",
+  "pred"
+ ],
+ "screening_pick_identical": true,
+ "checks_identical": true,
+ "substitutional_strain_bound_rel_change": [
+  0.018387306913351664,
+  0.21529128553097848
+ ],
+ "claim_scores": {
+  "C6": "held as predicted (magnitude only): pick identical (x = 0.3, 3 at% C, few-nm SiC), decision_robustness.json byte-identical",
+  "C7": "held as predicted (unaffected): r50_results.json byte-identical, ledger-110 savings unchanged to the last digit",
+  "C21": "held as predicted (unaffected): light_dopants_results.json byte-identical"
+ }
+}

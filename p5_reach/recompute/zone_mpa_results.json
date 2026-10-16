@@ -1,0 +1,336 @@
+{
+ "source": "P5 recompute R_Z1, MACE-MPA-0 medium (ledger 133, raw 137); comparison = MACE-MP-0 Z1 (ledger 69-70)",
+ "gates": {
+  "G1_old": true,
+  "G1_new": true
+ },
+ "profile_dE_eV": {
+  "MP-0": {
+   "6.5": -0.09113206740221358,
+   "7.5": -0.0656952110111888,
+   "8.5": 0.0006598311956622638,
+   "9.5": -0.0019668241275212495,
+   "10.5": 0.007504546364543785,
+   "11.5": -0.020337827658295282,
+   "12.5": -0.01650576775864465,
+   "13.5": -0.00811596264520631
+  },
+  "MPA-0": {
+   "6.5": 0.01042147554744588,
+   "7.5": -0.041339052628245554,
+   "8.5": -0.16040216776855232,
+   "9.5": 0.011874329948113882,
+   "10.5": 0.005623765547170478,
+   "11.5": -0.02718595438182092,
+   "12.5": -0.02343576493967703,
+   "13.5": 0.010593050183160813
+  },
+  "shift": {
+   "6.5": 0.10155354294965946,
+   "7.5": 0.02435615838294325,
+   "8.5": -0.16106199896421458,
+   "9.5": 0.013841154075635131,
+   "10.5": -0.0018807808173733065,
+   "11.5": -0.006848126723525638,
+   "12.5": -0.006929997181032377,
+   "13.5": 0.018709012828367122
+  }
+ },
+ "PrZ1": {
+  "old": {
+   "dE_innermost_eV": -0.09113206740221358,
+   "pass": false
+  },
+  "new": {
+   "dE_innermost_eV": 0.01042147554744588,
+   "pass": true
+  }
+ },
+ "PrZ4": {
+  "old": {
+   "w_eq_1473K_A": 0.0,
+   "pass": true
+  },
+  "new": {
+   "w_eq_1473K_A": 0.0,
+   "pass": true
+  }
+ },
+ "claim_scores": {
+  "C8": {
+   "predicted_class": "decision may flip",
+   "predicted_outcome": "attraction holds (dE between -0.25 and -0.02 eV); P(flip) about 0.3",
+   "dE_innermost_old_eV": -0.09113206740221358,
+   "dE_innermost_new_eV": 0.01042147554744588,
+   "refuted": true,
+   "score": "decision flipped (predicted as may-flip); outside the predicted -0.25 to -0.02 eV band: magnitude miss"
+  },
+  "C9": {
+   "predicted_class": "magnitude only",
+   "cancel_old": [
+    0.0,
+    0.0
+   ],
+   "cancel_new": [
+    0.0,
+    0.0
+   ],
+   "branch_old": "strengthen",
+   "branch_new": "strengthen",
+   "w_eq_1473K_old_A": 0.0,
+   "w_eq_1473K_new_A": 0.0,
+   "refuted": false,
+   "score": "held as predicted (magnitude only)"
+  }
+ },
+ "analyze_zone_new": {
+  "design_sha256": "c1cce5d2cac0570b00df95c93291b9b067a12f622e3f8bf2d75a67ae5d58542a",
+  "analysis_time_choices": [
+   "Z1 profile: p(d) = 1 - exp(-dE(d)/kT) at the mean site distance of each bin; linear between bin centres; p held at the innermost-bin value from the interface (5 A) inward to the first bin; after the last significant bin p falls linearly to zero at the next bin centre and stays zero",
+   "Z1 w_eq solves (RP + w)^3 - RP^3 = 3 * integral of p(r) r^2 dr; a negative integral (Ge enrichment) gives w_eq = 0",
+   "Z2 pocket fraction taken over the 7 fitted bins per half from the equilibrated box, as in the parent fit"
+  ],
+  "G1": {
+   "per_task": {
+    "d10.5_0": true,
+    "d10.5_1": true,
+    "d11.5_0": true,
+    "d11.5_1": true,
+    "d12.5_0": true,
+    "d12.5_1": true,
+    "d13.5_0": true,
+    "d13.5_1": true,
+    "d6.5_0": true,
+    "d6.5_1": true,
+    "d7.5_0": true,
+    "d7.5_1": true,
+    "d8.5_0": true,
+    "d8.5_1": true,
+    "d9.5_0": true,
+    "d9.5_1": true,
+    "far_0": true,
+    "far_1": true,
+    "ref": true
+   },
+   "pass": true
+  },
+  "Z1": {
+   "E_far_eV": -9419.405148829683,
+   "far_half_diff_eV": 6.366462912410498e-12,
+   "profile": [
+    {
+     "bin": 6.5,
+     "d_A": 6.452177168484848,
+     "dE_eV": [
+      0.010421475539260427,
+      0.010421475555631332
+     ],
+     "dE_mean": 0.01042147554744588,
+     "half_range": 8.185452315956354e-12,
+     "significant": true
+    },
+    {
+     "bin": 7.5,
+     "d_A": 7.536395587753334,
+     "dE_eV": [
+      -0.04133905263188353,
+      -0.041339052624607575
+     ],
+     "dE_mean": -0.041339052628245554,
+     "half_range": 3.637978807091713e-12,
+     "significant": true
+    },
+    {
+     "bin": 8.5,
+     "d_A": 8.426803924761218,
+     "dE_eV": [
+      -0.1604021677703713,
+      -0.16040216776673333
+     ],
+     "dE_mean": -0.16040216776855232,
+     "half_range": 1.8189894035458565e-12,
+     "significant": true
+    },
+    {
+     "bin": 9.5,
+     "d_A": 9.53608038668102,
+     "dE_eV": [
+      0.011874329942656914,
+      0.01187432995357085
+     ],
+     "dE_mean": 0.011874329948113882,
+     "half_range": 5.4569682106375694e-12,
+     "significant": true
+    },
+    {
+     "bin": 10.5,
+     "d_A": 10.255569702507536,
+     "dE_eV": [
+      0.005623765542623005,
+      0.005623765551717952
+     ],
+     "dE_mean": 0.005623765547170478,
+     "half_range": 4.547473508864641e-12,
+     "significant": false
+    },
+    {
+     "bin": 11.5,
+     "d_A": 11.533823660050995,
+     "dE_eV": [
+      -0.027185954377273447,
+      -0.027185954386368394
+     ],
+     "dE_mean": -0.02718595438182092,
+     "half_range": 4.547473508864641e-12,
+     "significant": true
+    },
+    {
+     "bin": 12.5,
+     "d_A": 12.483598603737015,
+     "dE_eV": [
+      -0.02343576495331945,
+      -0.023435764926034608
+     ],
+     "dE_mean": -0.02343576493967703,
+     "half_range": 1.3642420526593924e-11,
+     "significant": true
+    },
+    {
+     "bin": 13.5,
+     "d_A": 13.436943626883686,
+     "dE_eV": [
+      0.010593050184979802,
+      0.010593050181341823
+     ],
+     "dE_mean": 0.010593050183160813,
+     "half_range": 1.8189894035458565e-12,
+     "significant": true
+    }
+   ],
+   "w_eq_A_1373K": 0.0,
+   "integral_1373K": -280.81409799400035,
+   "w_eq_A_1473K": 0.0,
+   "integral_1473K": -250.384666943925
+  },
+  "PrZ1": {
+   "dE_innermost_eV": 0.01042147554744588,
+   "pass": true
+  },
+  "PrZ4": {
+   "w_eq_1473K_A": 0.0,
+   "pass": true
+  },
+  "G3": {
+   "host": [
+    1.145,
+    1.188
+   ],
+   "rel_diff": 0.0368624089155593,
+   "pass": true
+  },
+  "G2": {
+   "gaps_A": {
+    "s20261001": [
+     12.035933898987134,
+     11.353982268072608
+    ],
+    "s20261002": [
+     12.035933898987134,
+     11.27107925084836
+    ]
+   },
+   "pass": true
+  },
+  "PrZ2": {
+   "rows": {
+    "sh10w7": {
+     "obs": 1.0565795113587653,
+     "half_range": 0.017573939134161942,
+     "pred": 1.062,
+     "f_fit": 0.028994543087059673,
+     "pass": true
+    },
+    "sh10w12": {
+     "obs": 1.1350192884697812,
+     "half_range": 0.002571795970852997,
+     "pred": 1.139,
+     "f_fit": 0.06288117426000431,
+     "pass": true
+    }
+   },
+   "pass": true
+  },
+  "PrZ3": {
+   "obs": 1.0934419202743246,
+   "half_range": 0.01928846978139742,
+   "pred": 1.098,
+   "pass": true
+  },
+  "c_used": {
+   "c": 8.083,
+   "note": "parent post-hoc fit (PrZ2 passed)"
+  },
+  "Z3": {
+   "w_used_A": 0.0,
+   "w_source": "Z1 at 1473 K",
+   "rows": {
+    "R2.5nm": {
+     "1473K": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.125
+     },
+     "1373K": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.125
+     },
+     "used": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.125
+     },
+     "w_star_A": 21.98383701381109
+    },
+    "R5nm": {
+     "1473K": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.14700000000000002
+     },
+     "1373K": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.14700000000000002
+     },
+     "used": {
+      "w_A": 0.0,
+      "f_pocket": 0.0,
+      "pocket_factor": 1.0,
+      "cancel": 0.0,
+      "net_reduction": 0.14700000000000002
+     },
+     "w_star_A": 48.234539617677356
+    }
+   }
+  },
+  "decision": {
+   "branch": "strengthen",
+   "cancel": [
+    0.0,
+    0.0
+   ],
+   "rule": "if cancel < 0.2 at both radii: the density-edge carbon claims (ledger seq 61) stand; the zone is recorded as a quantified minor term in the P1 model and limitations"
+  }
+ }
+}

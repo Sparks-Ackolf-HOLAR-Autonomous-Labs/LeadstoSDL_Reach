@@ -1,0 +1,25 @@
+{
+ "tag": "data-20261003",
+ "full_release": {
+  "all_curves.csv.gz": {
+   "sha256": "77704590b6176b8f95c7356b24dc75fbae9de301ed2c15deb2eb4de76b2e58b8",
+   "bytes": 43755277
+  },
+  "all_samples.csv.gz": {
+   "sha256": "8b22e531157e10852944fc31a768b8a0b2ba877100a56167f523ec7db5b4a1f5",
+   "bytes": 4728751
+  },
+  "all_papers.csv.gz": {
+   "sha256": "76fd6a15ba5fdda77b332329c2c5f646b4be4825672cdd2d0e4d6bf87b7084e9",
+   "bytes": 9495060
+  }
+ },
+ "slice_files": {
+  "starry_sige_kappa_curves.csv": "2165e0294b3835311ccbcc242819aafbf0358cb0efcf6177bd20a6e3505672f6",
+  "starry_sige_samples.csv": "86b77b0d3031ac40639cfd240eddffe20f5a30642a4e7fade1f83077a855f6b4",
+  "starry_sige_papers.csv": "04c5602b5ea02877515649f21f76697446de4bfbc4f30a4d6c5c33abed899d33"
+ },
+ "n_curves": 529,
+ "n_samples": 456,
+ "n_papers": 116
+}
